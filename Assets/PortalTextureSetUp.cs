@@ -8,19 +8,33 @@ public class PortalTextureSetUp : MonoBehaviour
 
     #region references
        public Camera cameraRenderPortalPueblo;
-       public Material cameraMaterial;
+       public Camera cameraRenderPortalInicio;
+
+       public Material cameraMaterialPortalPueblo;
+       public Material cameraMaterialPortalInicio;
     #endregion
     // Start is called before the first frame update
     void Start()
     {
-        //si existe la camara
-        if(cameraRenderPortalPueblo.targetTexture!=null)
+        //si existe la cameraRenderPortalPueblo
+        if (cameraRenderPortalPueblo.targetTexture!=null)
         {
             cameraRenderPortalPueblo.targetTexture.Release();
         }
         //ponemos tamaño de la renderTexture y el depth=24
-        cameraRenderPortalPueblo.targetTexture = new RenderTexture(Screen.width, Screen.height, 20);
-        cameraMaterial.mainTexture = cameraRenderPortalPueblo.targetTexture;
+        cameraRenderPortalPueblo.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        cameraMaterialPortalPueblo.mainTexture = cameraRenderPortalPueblo.targetTexture;
+
+
+
+        //si existe la cameraRenderPortalInicio
+        if (cameraRenderPortalInicio.targetTexture != null)
+        {
+            cameraRenderPortalInicio.targetTexture.Release();
+        }
+        //ponemos tamaño de la renderTexture y el depth=24
+        cameraRenderPortalInicio.targetTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        cameraMaterialPortalInicio.mainTexture = cameraRenderPortalInicio.targetTexture;
 
 
     }
