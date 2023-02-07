@@ -126,9 +126,10 @@ public class UI_Manager : MonoBehaviour
         _timeDisplayText.text = newTime.ToString();
     }
 
+    //ocultamos todo el GameObject Tiempo  _timeLeft
     public void OcultarTiempo(bool active)
     {
-        _timeDisplayObject.SetActive(active);
+        _timeLeft.SetActive(active);
     }
     /// <summary>
     /// Updates displayer player's life points.

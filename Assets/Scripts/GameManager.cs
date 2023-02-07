@@ -24,9 +24,9 @@ public class GameManager : MonoBehaviour
     //para saber si hemos acabado el nivel 1 o no
     [HideInInspector]
     public bool _myNivel1Acabado = false;
-    //para saber si estamos en un nivel o de ruta para desconectar el tiempo, si es false , estamos en un nivel hay tiempo
+    //para saber si estamos en un nivel cronometrado
     [HideInInspector]
-    public bool _myModoRutaLibre = false;
+    public bool _nivelCronometrado = false;
     //por defecto a true porque en menus  iniciales debe estar puesto
     [HideInInspector]
      public bool _myCursor = true;
@@ -99,6 +99,17 @@ public class GameManager : MonoBehaviour
 
     }
 
+    //para pasar de nivel normal a nivel cronometrado
+    public void SetNivelCronometrado(bool cronometro)
+    {
+        _nivelCronometrado = cronometro;
+    }
+
+    //devueve informacion de si es o no nivel cronometrado
+    public bool GetNivelCronometrado()
+    {
+        return _nivelCronometrado;
+    }
     //devuelve estado de partida, si =true,sigue habiendo partida
     public bool EstadoPartida()
     {
@@ -349,32 +360,25 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void Update()
     {
-        
-        //si no quedan enemigos  y _myNivel1Acabado==false(por defecto) en el primer nivel te lo has pasado 
+        //si no quedan enemigos  y _myNivel1Acabado==false(por defecto) en el primer nivel te lo has pasad 
        if(_listOfEnemies.Count<=0 )
        {
-            
-            //OnPlayerVictory();
-
-
             //activamos panel paso de nivel si hemos acabado el nivel
             if (_myNivel1Acabado) { _myUIManager.SetNextLevel(true); }
-            
-            
        }
-       //comprobamos estado de partida = false
+       //comprobamos estado de partida,si es false , GameOver
         if(!EstadoPartida())
         {
             OnPlayerDefeat();
         }
         
         
-        //llamamos a este si estamos en un nivel
-        if(!_myModoRutaLibre)
+        //si estamos en nivel cronometrado,ponemos timer y lo activamos del canvas
+        if(GetNivelCronometrado())
         {
             TiempoNiveles();
         }
-        //si _myModoRutaLibre = true el tiempo es infinito
+        //si no estamos en nivel cronometrado,ocultamos tiempo
         else
         {
             //ponemos el tiempo promedio del nivel y será estático

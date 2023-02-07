@@ -12,10 +12,10 @@ public class PowerUpManager : MonoBehaviour
     {
         _myGameManager.AumentoTiempo(ExtraTime);
     }
-    //paraliza el tiempo para modo ruta ilimitado
-    public void ParalizarTiempoModoRuta()
+    //paraliza el tiempo porque ya no es un nivel cronometrado
+    public void QuitarNivelCronometrado()
     {
-        _myGameManager._myModoRutaLibre = true;
+        _myGameManager._nivelCronometrado = false;
     }
     void Start()
     {

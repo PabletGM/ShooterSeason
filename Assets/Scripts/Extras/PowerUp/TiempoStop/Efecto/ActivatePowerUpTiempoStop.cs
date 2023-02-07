@@ -14,7 +14,7 @@ public class ActivatePowerUpTiempoStop : MonoBehaviour
         if (collision.gameObject.GetComponent<PowerUpManager>())
         {
             //accedemos al script del Player PowerUpManager y a su metodo AumentoTiempo
-            collision.gameObject.GetComponent<PowerUpManager>().ParalizarTiempoModoRuta();
+            collision.gameObject.GetComponent<PowerUpManager>().QuitarNivelCronometrado();
 
             //activamos del GameManager el _myNivelAcabado1 = true
             _myGameManager._myNivel1Acabado = true;
