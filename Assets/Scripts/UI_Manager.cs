@@ -22,8 +22,6 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private protected GameObject _playerAmetralladora;
 
-    [SerializeField]
-    private protected  GameObject _playerIA;
     /// <summary>
     /// Text Component to display number of live enemies.
     /// </summary>
@@ -276,33 +274,11 @@ public class UI_Manager : MonoBehaviour
         //timeLeft
         _timeLeft.SetActive(enabled);
     }
-    public void WatchMode()
-    {
-        //se desactiva MainMenu a false
-        SetMainMenu(false);
-        //se activa  interfaz inicio jugador
-        InterfazInicioJugador(true);
-        //desactivamos el puntero
-        _myGameManager.EndGame(false);
-        //activas IA y desactivas jugador
-        ActivarJugadorIA(true);
-        //si pulsas Watch se inicia partida normal  
-        _myGameManager.StartMatch();
-
-    }
 
     public void ActivarJugador(bool enabled)
     {
         _playerAmetralladora.SetActive(enabled);
     }
-    public void ActivarJugadorIA(bool enabled)
-    {
-        //desactivas jugador por defecto en true
-        ActivarJugador(false);
-        //activas jugador IA
-        _playerIA.SetActive(enabled);
-    }
-
     /// <summary>
     /// Initializes own references.
     /// </summary>
