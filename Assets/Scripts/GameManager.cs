@@ -98,6 +98,18 @@ public class GameManager : MonoBehaviour
         _listOfEnemies2 = new List<EnemyController2>();
 
     }
+
+    //devuelve estado de partida, si =true,sigue habiendo partida
+    public bool EstadoPartida()
+    {
+        return _myplayerAlive;
+    }
+
+    //Cambia estado de partida
+    public void cambiarEstadoPartida(bool newState)
+    {
+        _myplayerAlive = newState;
+    }
     public void PonerCursor()
     {
         //asi no aplicamos el bloqueo al cursor
@@ -350,8 +362,8 @@ public class GameManager : MonoBehaviour
             
             
        }
-       //sino queda tiempo o jugador muerto has perdido
-        if(_timeLeft<=0 ||!_myplayerAlive )
+       //comprobamos estado de partida = false
+        if(!EstadoPartida())
         {
             OnPlayerDefeat();
         }
@@ -369,7 +381,7 @@ public class GameManager : MonoBehaviour
             _timeLeft = 60;
             // //actualizamos el tiempo y lo ponemos en pantalla
             _displayTimeLeft = (int)_timeLeft;
-            //ocultamo este para que no se vea
+            //ocultamos este para que no se vea
             _myUIManager.OcultarTiempo(false);
             
         }
