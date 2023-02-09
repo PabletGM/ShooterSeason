@@ -17,11 +17,20 @@ public class EventosZonaTemplo : MonoBehaviour
         GameManager.GetInstance().AddEnemy(enemyController);
     }
 
+    private void AñadirLimitesLevel1()
+    {
+        Debug.Log("limites añadidos");
+        limitesNivel1.SetActive(true);
+    }
+
     #endregion
 
     #region references
 
     private EnemyController enemyController;
+
+    [SerializeField]
+    private GameObject limitesNivel1;
 
     #endregion
 
@@ -54,10 +63,14 @@ public class EventosZonaTemplo : MonoBehaviour
             collision.gameObject.GetComponent<EnemyController>().NewEnemyZonaTemplo();
         }
 
-        //si entra jugador avisa y activa paredes invisibles de la zona 1 , no se podrá salir ya de esta.
+        //si entra jugador avisa y activa paredes invisibles de la zona 1 , no se podrá salir ya de esta, asi evitamos que algun enemigo salga y vuelva a entrar detectandolo 2 veces el collider y jodiendo el registro de enemigos
         if (collision.gameObject.GetComponent<PlayerLifeComponent>())
         {
             Debug.Log("Entro jugador");
+            //activando nivel 1
+            Invoke("AñadirLimitesLevel1", 2.0f);
+            
+
         }
     }
 }
