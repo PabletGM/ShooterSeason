@@ -54,7 +54,7 @@ public class EventosZonaTemplo : MonoBehaviour
             collision.gameObject.GetComponent<EnemyController>().NewEnemyZonaTemplo();
         }
 
-        //si entra jugador avisa
+        //si entra jugador avisa y activa paredes invisibles de la zona 1 , no se podrá salir ya de esta.
         if (collision.gameObject.GetComponent<PlayerLifeComponent>())
         {
             Debug.Log("Entro jugador");
