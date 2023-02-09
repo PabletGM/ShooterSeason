@@ -21,9 +21,6 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool _pause = false;
     private int maxHealth = 100;
-    //para saber si hemos acabado el nivel 1 o no
-    [HideInInspector]
-    public bool _myNivel1Acabado = false;
     //para saber si estamos en un nivel cronometrado
     [HideInInspector]
     public bool _nivelCronometrado = false;
@@ -149,6 +146,12 @@ public class GameManager : MonoBehaviour
         //añadir un enemigo a la lista
         _listOfEnemies.Add(enemyToAdd);
         Debug.Log(_listOfEnemies.Count);
+    }
+
+    //devuelve numero de enemigos por zona
+    public int NumeroEnemigosZona()
+    {
+        return _listOfEnemies.Count;
     }
 
     public void RegisterEnemyLevel2(EnemyController2 enemyToAdd2)
@@ -360,6 +363,13 @@ public class GameManager : MonoBehaviour
         _displayTimeLeft = (int)_timeLeft;
         _myUIManager.UpdateTime(_displayTimeLeft);
     }
+
+    //si no quedan enemigos en level 1
+    public void NivelTemploContrarrelojAcabado()
+    {
+        _myUIManager.SetNextLevel(true);
+    }
+
     
     #endregion
     /// <summary>
@@ -379,12 +389,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void Update()
     {
-        //si no quedan enemigos  y _myNivel1Acabado==false(por defecto) en el primer nivel te lo has pasad 
-       if(_listOfEnemies.Count<=0 )
-       {
-            //activamos panel paso de nivel si hemos acabado el nivel
-            if (_myNivel1Acabado) { _myUIManager.SetNextLevel(true); }
-       }
+        
        //comprobamos estado de partida,si es false , GameOver
         if(!EstadoPartida())
         {

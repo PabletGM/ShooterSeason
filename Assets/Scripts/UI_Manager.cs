@@ -199,8 +199,6 @@ public class UI_Manager : MonoBehaviour
         _myGameManager._myCursor = true;
         //quitamos el panel o lo ponemos 
         _NextLevelObject.SetActive(enabled);
-        //para que no se llame al metodo en bucle
-        _myGameManager._myNivel1Acabado = false;
     }
     public void NextLevelContinue()
     {

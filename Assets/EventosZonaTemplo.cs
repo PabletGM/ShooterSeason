@@ -32,6 +32,18 @@ public class EventosZonaTemplo : MonoBehaviour
         //reinicia lista de enemigos
         GameManager.GetInstance().ResetEnemies();
     }
+
+    //comprueba que quedan enemigos en la zona
+    void Update()
+    {
+        //se pasa de nivel
+        if(GameManager.GetInstance().NumeroEnemigosZona()<=0)
+        {
+            GameManager.GetInstance().NivelTemploContrarrelojAcabado();
+            //se destruye este script y el gameObject
+            Destroy(this.gameObject);
+        }
+    }
     //trigger de zona
     private void OnTriggerEnter(Collider collision)
     {
