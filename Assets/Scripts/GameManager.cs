@@ -142,6 +142,15 @@ public class GameManager : MonoBehaviour
         //añadir un enemigo a la lista
         _listOfEnemies.Add(enemyToAdd);
     }
+
+    //añade 1 enemigo a la lista
+    public void AddEnemy(EnemyController enemyToAdd)
+    {
+        //añadir un enemigo a la lista
+        _listOfEnemies.Add(enemyToAdd);
+        Debug.Log(_listOfEnemies.Count);
+    }
+
     public void RegisterEnemyLevel2(EnemyController2 enemyToAdd2)
     {
         //añadir un enemigo a la lista
@@ -303,6 +312,16 @@ public class GameManager : MonoBehaviour
         _myUIManager.SetGameOver(true);
         _myUIManager.SetContinueButton(true);
         
+    }
+
+    public void ResetEnemies()
+    {
+        //desactivamos todos los enemigos
+        for (int i = 0; i < _listOfEnemies.Count; i++)
+        {
+            //vamos haciendo remove de cada elemento de la lista i
+            OnEnemyDies(_listOfEnemies[i]);
+        }
     }
     /// <summary>
     /// Initializes match 

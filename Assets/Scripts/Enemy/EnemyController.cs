@@ -31,23 +31,20 @@ public class EnemyController : MonoBehaviour
     private protected Transform _myApuntador;
 
     GameManager _myGameManager;
+
     
+    private EventosZonaTemplo eventosZoneTemplo;
+
     #endregion
     #region methods
-    /// <summary>
-    /// Deactivate gravity on enemies.
-    /// </summary>
-    public void StopEnemy()
-    {
-        //TODO
-    }
+
     /// <summary>
     /// Activates enemy and sets random initial velocity for RigidBody.
     /// </summary>
     public void StartEnemy()
     {
         //activa el enemigo.
-        this.gameObject.SetActive(true);
+        //this.gameObject.SetActive(true);
         //pone un impulso aleatorio y lo guarda en la variable impulse.
         float impulse = Random.Range(_randomImpulse, -_randomImpulse);
         //ponemos el componente usegravity del rigidbody a true por si acaso
@@ -65,6 +62,12 @@ public class EnemyController : MonoBehaviour
         //el empuje va en direccion z del apuntador es decir para atras
         _myRigidBody.AddForce(direccionKnockback.normalized*fuerzaEmpuje, ForceMode.Impulse);
     }
+
+    //pasa la instancia de EnemyController a EnemyZonaTemplo
+    public void NewEnemyZonaTemplo()
+    {
+        eventosZoneTemplo.AñadirEnemigo(this);
+    }
     #endregion
    
 
@@ -77,13 +80,11 @@ public class EnemyController : MonoBehaviour
     /// </summary>
     void Start()
     {
-       
-        _myRigidBody = GetComponent<Rigidbody>();
         _myGameManager = GameManager.GetInstance();
-        _myGameManager.RegisterEnemyLevel1(this);
-        this.gameObject.SetActive(false);
-        
-
+        //se busca GameObject con componente y se asocia
+        eventosZoneTemplo = GameObject.Find("TemploTimer").GetComponent<EventosZonaTemplo>();
+        //_myGameManager.RegisterEnemyLevel1(this);
+        _myRigidBody = GetComponent<Rigidbody>();
     }
 
     //el elemento drag del rigidbody es la resistencia al aire

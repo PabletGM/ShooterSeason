@@ -28,7 +28,7 @@ public class ActivatePowerUpOnCollision : MonoBehaviour
             //accedemos al script del Player PowerUpManager y a su metodo AumentoTiempo
             collision.gameObject.GetComponent<PowerUpManager>().AumentoTiempo(TiempoExtra);
             //lo pones por consola
-            Debug.Log("20 segundos extra");
+
             //pones sonido de moneda la posicion 0 a mitad de sonido 
             soundManager.SeleccionAudio(0, 0.5f);
             

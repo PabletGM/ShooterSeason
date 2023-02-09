@@ -11,8 +11,8 @@ public class PlayerLifeComponent : MonoBehaviour
     /// <summary>
     /// Vertical line for death of enemies.
     /// </summary>
-    [SerializeField]
-    private float _deadLineHeight = -10.0f;
+    //[SerializeField]
+    //private float _deadLineHeight = -10.0f;
     /// <summary>
     /// Initial life for the player
     /// </summary>

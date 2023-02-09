@@ -68,7 +68,7 @@ public class EnemyController2 : MonoBehaviour
 
         //_myRigidBody = GetComponent<Rigidbody>();
         _myGameManager = GameManager.GetInstance();
-        _myGameManager.RegisterEnemyLevel2(this);
+        //_myGameManager.RegisterEnemyLevel2(this);
         this.gameObject.SetActive(false);
 
 
