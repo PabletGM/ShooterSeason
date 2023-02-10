@@ -100,6 +100,8 @@ public class GameManager : MonoBehaviour
     public void SetNivelCronometrado(bool cronometro)
     {
         _nivelCronometrado = cronometro;
+        //activamos GO timero no
+        _myUIManager.SetTimer(cronometro);
     }
 
     //devueve informacion de si es o no nivel cronometrado
@@ -408,6 +410,7 @@ public class GameManager : MonoBehaviour
         //si estamos en nivel cronometrado,ponemos timer y lo activamos del canvas
         if(GetNivelCronometrado())
         {
+            
             TiempoNiveles();
         }
         //si no estamos en nivel cronometrado,ocultamos tiempo

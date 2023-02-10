@@ -17,6 +17,12 @@ public class PowerUpManager : MonoBehaviour
     {
         _myGameManager._nivelCronometrado = false;
     }
+
+    //comenzar timer
+    public void ComenzarTimer()
+    {
+        _myGameManager.SetNivelCronometrado(true);
+    }
     void Start()
     {
         _myGameManager = GameManager.GetInstance();

@@ -207,6 +207,11 @@ public class UI_Manager : MonoBehaviour
         _enemiesLeft.SetActive(enabled);
     }
 
+    public void SetTimer(bool enabled)
+    {
+        _timeLeft.SetActive(enabled);
+    }
+
     public void SetNextLevel(bool enabled)
     {
         //ponemos cursor
@@ -238,9 +243,7 @@ public class UI_Manager : MonoBehaviour
     public void Play()
     {
         //ACTIVAMOS SCRIPT GM y fpsMove
-
-        _myGameManager.enabled=true;
-        
+        _myGameManager.enabled=true;     
     }
 
     public void ActualizarVidaJugador(int health)
