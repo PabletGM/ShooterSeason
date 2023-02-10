@@ -15,10 +15,11 @@ public class ActivatePowerUpTiempoStop : MonoBehaviour
         {
             //accedemos al script del Player PowerUpManager y a su metodo AumentoTiempo
             collision.gameObject.GetComponent<PowerUpManager>().QuitarNivelCronometrado();
+            //siguiente nivel
+            _myGameManager.SetNextLevel2();
             //lo destruyes 
             Destroy(this.gameObject);
-            //actualizas numero  de enemigos level 2
-            _myGameManager.NumEnemiesLevel2();
+            
         }
     }
     

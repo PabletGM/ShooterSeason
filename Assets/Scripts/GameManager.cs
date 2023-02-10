@@ -367,6 +367,14 @@ public class GameManager : MonoBehaviour
     //si no quedan enemigos en level 1
     public void NivelTemploContrarrelojAcabado()
     {
+        //quitamos EnemiesLeft de arriba por ahora
+        _myUIManager.SetEnemiesLeft(false);
+        
+    }
+
+    //siguiente Nivel
+    public void SetNextLevel2()
+    {
         _myUIManager.SetNextLevel(true);
     }
 
@@ -416,10 +424,10 @@ public class GameManager : MonoBehaviour
 
         
 
-        //activamos cursor si es true
+        //activamos cursor si es true, para Menus y poder usar el raton
         if (_myCursor)
         {PonerCursor(); }
-        //desactivamos cursor si es false
+        //desactivamos cursor si es false,si se desactiva se pone el juego y la camara
         else
         { QuitarCursor(); }
         

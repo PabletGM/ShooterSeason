@@ -58,6 +58,9 @@ public class UI_Manager : MonoBehaviour
 
     [SerializeField]
     private protected GameObject _NextLevelObject;
+
+    [SerializeField]
+    private protected GameObject _consejosGameObject;
     /// <summary>
     /// Reference to object containing objects for Player's Victory
     /// </summary>
@@ -151,6 +154,11 @@ public class UI_Manager : MonoBehaviour
         _gameOver.SetActive(enabled);
         
     }
+
+    public void SetConsejosButton(bool enabled)
+    {
+        _consejosGameObject.SetActive(enabled);
+    }
     /// <summary>
     /// Allows to activate and deactivate Player's victory menu.
     /// </summary>
@@ -193,6 +201,12 @@ public class UI_Manager : MonoBehaviour
         SetGameOver(false);
         SetPlayerVictory(false);
     }
+
+    public void SetEnemiesLeft(bool enabled)
+    {
+        _enemiesLeft.SetActive(enabled);
+    }
+
     public void SetNextLevel(bool enabled)
     {
         //ponemos cursor
@@ -271,7 +285,18 @@ public class UI_Manager : MonoBehaviour
         //enemiesLeft
         _enemiesLeft.SetActive(enabled);
         //timeLeft
-        _timeLeft.SetActive(enabled);
+        //_timeLeft.SetActive(enabled);
+
+        //consejos
+        SetConsejosButton(true);
+    }
+
+    //quitamos misiones al pulsar a Quit
+    public void QuitarMisionesTemploLevel1()
+    {
+        SetConsejosButton(false);
+        //cambiamos cursor para desactivar modo Menus
+        _myGameManager._myCursor = false;
     }
 
     public void ActivarJugador(bool enabled)
