@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     /// Reference to player.
     /// </summary>
     private GameObject _player;
+
+    
     #endregion
     #region properties
     /// <summary>
@@ -374,6 +376,8 @@ public class GameManager : MonoBehaviour
         
     }
 
+   
+
     //siguiente Nivel
     public void SetNextLevel2()
     {
@@ -382,6 +386,7 @@ public class GameManager : MonoBehaviour
 
     
     #endregion
+
     /// <summary>
     /// Finds UI Manager and Player.
     /// Deactivates player and GameManager.

@@ -13,6 +13,9 @@ public class UI_Manager : MonoBehaviour
     public GameObject healthbar;
     
     GameManager _myGameManager;
+
+    private PowerUpManager _mypowerUpManager;
+
     /// <summary>
     /// Reference to object containing Text Component to display number of live enemies.
     /// </summary>
@@ -300,6 +303,10 @@ public class UI_Manager : MonoBehaviour
         SetConsejosButton(false);
         //cambiamos cursor para desactivar modo Menus
         _myGameManager._myCursor = false;
+        //queremos tambien habilitar la zona de la escalera para que se pueda pasar al Level 2 y pasarse el timer
+        _mypowerUpManager.HabilitarZonaEscaleraLevel1();
+
+
     }
 
     public void ActivarJugador(bool enabled)
@@ -323,6 +330,8 @@ public class UI_Manager : MonoBehaviour
         
         //asi es como asociamos el GameManager con el UI
         _myGameManager = GameManager.GetInstance();
+        //inicializamos script
+        _mypowerUpManager = PowerUpManager.GetInstance();
         //asi es como indicamos que el UI es este script
         _myGameManager.SETUIManager(this);
         //PARA QUE NO SE ACTIVE EL game manager hasta que le digas y asi se active en el metodo Play que se ejecuta despues de Start
