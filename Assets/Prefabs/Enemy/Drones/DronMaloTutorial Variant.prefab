@@ -22,6 +22,11 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3094089078371771910, guid: 1d15728ba480ea9448872a9eac8d1039,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 3807552954441294689, guid: 1d15728ba480ea9448872a9eac8d1039,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -129,4 +134,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3807552954441294693, guid: 1d15728ba480ea9448872a9eac8d1039, type: 3}
+    - {fileID: 3807552954441294692, guid: 1d15728ba480ea9448872a9eac8d1039, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d15728ba480ea9448872a9eac8d1039, type: 3}
