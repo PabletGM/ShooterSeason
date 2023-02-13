@@ -304,6 +304,8 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerDefeat()
     {
+        //desactivamos misiones de abajo
+        _myUIManager.QuitarMisionesTemploLevel1();
         //activamos cursor
         _myCursor = true;
         //EndGame(true);
@@ -406,7 +408,7 @@ public class GameManager : MonoBehaviour
     {
         
        //comprobamos estado de partida,si es false , GameOver
-        if(!EstadoPartida())
+        if(!EstadoPartida()||_timeLeft<=0)
         {
             OnPlayerDefeat();
         }
