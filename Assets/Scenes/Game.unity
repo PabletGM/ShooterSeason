@@ -46746,24 +46746,6 @@ MonoBehaviour:
   _pause: 1
   _nivelCronometrado: 0
   _myCursor: 1
---- !u!114 &1847064635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847064633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460153b1eb26df349ace5785f02325cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraRenderPortalPueblo: {fileID: 0}
-  cameraRenderPortalInicio: {fileID: 0}
-  cameraMaterialPortalPueblo: {fileID: 2100000, guid: 18fb2d25a6ada674996312a9c2a0c305,
-    type: 2}
-  cameraMaterialPortalInicio: {fileID: 2100000, guid: 7b0b7dcf2353b454792e145dba48086d,
-    type: 2}
 --- !u!1001 &1847524695
 PrefabInstance:
   m_ObjectHideFlags: 0
