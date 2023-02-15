@@ -31,8 +31,7 @@ public class DialogueScriptNPC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dialogueText.text = string.Empty;
-        
+        dialogueText.text = string.Empty; 
     }
 
     // Update is called once per frame

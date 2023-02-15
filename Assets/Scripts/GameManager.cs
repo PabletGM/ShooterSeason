@@ -434,6 +434,10 @@ public class GameManager : MonoBehaviour
         _myCursor = false;
         //activarDialogos
         _myUIManager.SetDialogosNPCFueraTemplo(dialogos);
+
+
+        //una vez que se ha interactuado con dron ponemos nueva mision
+        LogicaObjetivosTemplo.GetInstance().SetNewMission("Continua por el desfiladero");
     }
 
 
