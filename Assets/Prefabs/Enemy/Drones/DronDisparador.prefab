@@ -149,7 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxLife: 300
   _hitDamage: 20
-  _deadLineHeight: -10
   healthEnemyDronBar: {fileID: 1700685239284459493}
   _myText: {fileID: 3650429659061576485}
   _currentLife: 0
@@ -323,7 +322,7 @@ PrefabInstance:
     - target: {fileID: 7852017881016223060, guid: 48afb18ac521f2e44900301bc9a71024,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7852017881016223060, guid: 48afb18ac521f2e44900301bc9a71024,
         type: 3}

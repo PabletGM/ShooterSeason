@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6240806593554035686}
   - component: {fileID: 6798816703680662665}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: ssprite enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitDamage: 10
-  _deadLineHeight: -10
   healthEnemyBar: {fileID: 1864711592531688404}
   _myText: {fileID: 8743637566961425962}
 --- !u!114 &8743637566576541725
@@ -366,6 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cameraTransform: {fileID: 0}
 --- !u!114 &3956841171495563236
 MonoBehaviour:
   m_ObjectHideFlags: 0
