@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour
     {
         //añadir un enemigo a la lista
         _listOfEnemies.Add(enemyToAdd);
-        Debug.Log(_listOfEnemies.Count);
+        //Debug.Log(_listOfEnemies.Count);
     }
 
     //devuelve numero de enemigos por zona

@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 5500721440195029546}
   - component: {fileID: 5978984074231279872}
   - component: {fileID: 168396040724384911}
+  - component: {fileID: 1340463953924020159}
   - component: {fileID: 698846958539057031}
   - component: {fileID: 557083553342003933}
   - component: {fileID: 5708925800279295328}
@@ -273,6 +274,19 @@ MonoBehaviour:
   _shotOriginObject: {fileID: 974282213676860748}
   apuntador: {fileID: 446743523618167691}
   bala: {fileID: -1904336973431232995, guid: 42dec6133af1eab438fd37c69c616596, type: 3}
+--- !u!114 &1340463953924020159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795775655401643319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd553e3467a6505478e2f132f04922ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distancia: 1.5
 --- !u!114 &698846958539057031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b844dd6958fa074381f33b40bcf049c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enMovimiento: 0
   _myWalkSpeed: 3
   _mySprintSpeed: 5.3
   _jumpSpeed: 2.2
@@ -318,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dcfbbf01f6f9564f8c3ce533f834c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _habilitarEscalera: {fileID: 0}
 --- !u!114 &7189473122018223546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,7 +344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0023c593b6d78c84c932a4ef90d932e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deadLineHeight: -10
   _maxLife: 100
   _hitDamage: 20
 --- !u!82 &4795775655401643318
@@ -774,9 +787,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 312ebe18cfde2414ab00bf5113d78bc2, type: 3}
---- !u!198 &1793175290021066031 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 2620919315827854720, guid: 312ebe18cfde2414ab00bf5113d78bc2,
+--- !u!4 &2019431417175784703 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2358678370219263056, guid: 312ebe18cfde2414ab00bf5113d78bc2,
     type: 3}
   m_PrefabInstance: {fileID: 4376869194278877359}
   m_PrefabAsset: {fileID: 0}
@@ -798,9 +811,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4376869194278877359}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2019431417175784703 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2358678370219263056, guid: 312ebe18cfde2414ab00bf5113d78bc2,
+--- !u!198 &1793175290021066031 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2620919315827854720, guid: 312ebe18cfde2414ab00bf5113d78bc2,
     type: 3}
   m_PrefabInstance: {fileID: 4376869194278877359}
   m_PrefabAsset: {fileID: 0}
