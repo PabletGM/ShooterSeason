@@ -403,6 +403,27 @@ public class GameManager : MonoBehaviour
 
     public void DialogosNPCFueraTemplo(bool dialogos)
     {
+        //quitar elementos sobrantes de la pantalla interfaz jugador,miniMapa,Mirilla
+        _myUIManager.Mirilla(false);
+        _myUIManager.MiniMapa(false);
+        //el Presiona E para interactuar fuera
+        _myUIManager.SetPresionaEparaInteractuar(false);
+        //activar modoMenus
+        _myCursor = true;
+        //activarDialogos
+        _myUIManager.SetDialogosNPCFueraTemplo(dialogos);
+    }
+
+    public void QuitarDialogosNPCFueraTemplo(bool dialogos)
+    {
+        //poner elementos sobrantes de la pantalla interfaz jugador,miniMapa,Mirilla
+        _myUIManager.Mirilla(true);
+        _myUIManager.MiniMapa(true);
+        //el Presiona E para interactuar dentro
+        _myUIManager.SetPresionaEparaInteractuar(true);
+        //desactivar modoMenus
+        _myCursor = false;
+        //activarDialogos
         _myUIManager.SetDialogosNPCFueraTemplo(dialogos);
     }
 

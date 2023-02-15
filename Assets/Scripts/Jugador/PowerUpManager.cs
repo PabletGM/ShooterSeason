@@ -13,7 +13,7 @@ public class PowerUpManager : MonoBehaviour
 
     ///habilita escalera entrada camino y salir del templo
     [SerializeField]
-    private GameObject _habilitarEscalera;
+    private protected GameObject _habilitarEscalera;
 
 
     //habilitarZonaEscalera

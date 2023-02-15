@@ -32,7 +32,7 @@ public class EventosZonaTemplo : MonoBehaviour
     private LogicaObjetivosTemplo logicaTemplo;
 
     [SerializeField]
-    private GameObject limitesNivel1;
+    private protected GameObject limitesNivel1;
 
     #endregion
 

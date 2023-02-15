@@ -6,14 +6,14 @@ public class ObjetoInteractivo : MonoBehaviour
 {
     //objeto que posee el dialogo
     [SerializeField]
-    private GameObject Dialogo;
+    private protected GameObject Dialogo;
     
 
     public void ActivarObjeto()
     {
         //primero el GameOject Dialogos debe estar activado
         GameManager.GetInstance().DialogosNPCFueraTemplo(true);
-        //orden de ejecucion de dialogos
+        //orden de ejecutar dialogos
         Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
         //se encargará de empezar los dialogos
         Debug.Log("objeto activado");

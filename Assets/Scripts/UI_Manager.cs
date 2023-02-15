@@ -105,6 +105,9 @@ public class UI_Manager : MonoBehaviour
     /// </summary>
     [SerializeField]
     private protected GameObject _timeLeft;
+
+    [SerializeField]
+    private protected GameObject _InteractuarConE;
     #endregion
 
 
@@ -125,6 +128,11 @@ public class UI_Manager : MonoBehaviour
     public void Mirilla(bool mirilla)
     {
         _mirilla.SetActive(mirilla);
+    }
+
+    public void MiniMapa(bool miniMapa)
+    {
+        _minimapa.SetActive(miniMapa);
     }
     /// <summary>
     /// Updates displayed remaining time.
@@ -244,6 +252,11 @@ public class UI_Manager : MonoBehaviour
         //ponemos el tiempo a 1
         Time.timeScale = 1;
         
+    }
+
+    public void SetPresionaEparaInteractuar(bool interactuar)
+    {
+        _InteractuarConE.SetActive(interactuar);
     }
 
     public void SetDialogosNPCFueraTemplo(bool dialogo)

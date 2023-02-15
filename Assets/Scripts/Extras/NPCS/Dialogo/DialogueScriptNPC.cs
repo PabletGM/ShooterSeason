@@ -9,7 +9,7 @@ public class DialogueScriptNPC : MonoBehaviour
 
     //texto que se va a escribir
     [SerializeField]
-    private TextMeshProUGUI dialogueText;
+    private protected TextMeshProUGUI dialogueText;
 
     #endregion
 
@@ -17,11 +17,11 @@ public class DialogueScriptNPC : MonoBehaviour
 
     //diferentes lineas de texto que tengamos
     [SerializeField]
-    private string[] lines;
+    private protected string[] lines;
 
     //velocidad a la que se escribe el texto
     [SerializeField]
-    private float textSpeed=0.1f;
+    private float textSpeed=0.8f;
 
     //para saber en que linea estamos
     private int index;
@@ -90,8 +90,11 @@ public class DialogueScriptNPC : MonoBehaviour
         //sino cerramos dialogo porque es ultima linea
         else
         {
+            dialogueText.text = string.Empty;
+            //antes de quitar dialogos, ponemos todo como estaba antes
+            GameManager.GetInstance().QuitarDialogosNPCFueraTemplo(false);
             //desactivamos panel de texto
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }
