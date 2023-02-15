@@ -155,6 +155,7 @@ public class GameManager : MonoBehaviour
     //devuelve numero de enemigos por zona
     public int NumeroEnemigosZona()
     {
+        Debug.Log(_listOfEnemies.Count);
         return _listOfEnemies.Count;
     }
 

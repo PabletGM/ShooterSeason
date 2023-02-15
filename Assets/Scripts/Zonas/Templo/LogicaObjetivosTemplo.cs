@@ -38,7 +38,7 @@ public class LogicaObjetivosTemplo : MonoBehaviour
     void Update()
     {
         //comprobamos que queden enemigos en el templo
-        if(GameManager.GetInstance().NumeroEnemigosZona()<=0)
+        if(GameManager.GetInstance().NumeroEnemigosZona() <= 0)
         {
             //cambiamos mensaje a 
             textoMision.text = "Coge el contrarreloj para finalizar el nivel 1";

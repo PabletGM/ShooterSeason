@@ -21,7 +21,7 @@ public class DialogueScriptNPC : MonoBehaviour
 
     //velocidad a la que se escribe el texto
     [SerializeField]
-    private float textSpeed=0.8f;
+    private float textSpeed=0.02f;
 
     //para saber en que linea estamos
     private int index;
