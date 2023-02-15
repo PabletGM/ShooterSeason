@@ -66,6 +66,9 @@ public class UI_Manager : MonoBehaviour
     private protected GameObject _consejosGameObject;
 
     [SerializeField]
+    private protected GameObject _buttonQuit;
+
+    [SerializeField]
     private protected GameObject _dialogosNPCFueraTemplo;
     /// <summary>
     /// Reference to object containing objects for Player's Victory
@@ -321,13 +324,21 @@ public class UI_Manager : MonoBehaviour
     //quitamos misiones al pulsar a Quit
     public void QuitarMisionesTemploLevel1()
     {
+        //desactivamos misiones
         SetConsejosButton(false);
+        //desactivamos boton quit
+        SetButtonQuit(false);
         //cambiamos cursor para desactivar modo Menus
         _myGameManager._myCursor = false;
         //queremos tambien habilitar la zona de la escalera para que se pueda pasar al Level 2 y pasarse el timer
         _mypowerUpManager.HabilitarZonaEscaleraLevel1();
 
 
+    }
+
+    public void SetButtonQuit(bool enabled)
+    {
+        _buttonQuit.SetActive(enabled);
     }
 
     public void ActivarJugador(bool enabled)

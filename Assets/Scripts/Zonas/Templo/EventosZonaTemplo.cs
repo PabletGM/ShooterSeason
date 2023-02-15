@@ -25,9 +25,7 @@ public class EventosZonaTemplo : MonoBehaviour
 
     #endregion
 
-    #region references
-
-    private EnemyController enemyController;
+    #region reference
 
     private LogicaObjetivosTemplo logicaTemplo;
 
@@ -42,7 +40,7 @@ public class EventosZonaTemplo : MonoBehaviour
         //enemyController = GetComponent<EnemyController>();
         //reinicia lista de enemigos
         GameManager.GetInstance().ResetEnemies();
-        logicaTemplo = GetComponent<LogicaObjetivosTemplo>();
+        logicaTemplo = LogicaObjetivosTemplo.GetInstance();
     }
 
     //comprueba que quedan enemigos en la zona
@@ -74,7 +72,7 @@ public class EventosZonaTemplo : MonoBehaviour
             //activando nivel 1
             Invoke("AñadirLimitesLevel1", 2.0f);
             //si detecta a jugador damos nueva señal para cambio de mision
-            logicaTemplo.SetNewMission("Mata a todos los enemigos del Templo");
+           LogicaObjetivosTemplo.GetInstance().SetNewMission("Mata a todos los enemigos del Templo");
             
 
         }

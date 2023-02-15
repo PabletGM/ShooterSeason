@@ -20327,7 +20327,6 @@ GameObject:
   - component: {fileID: 1024158553}
   - component: {fileID: 1024158554}
   - component: {fileID: 1024158555}
-  - component: {fileID: 1024158556}
   m_Layer: 0
   m_Name: TemploTimer
   m_TagString: Untagged
@@ -20375,20 +20374,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limitesNivel1: {fileID: 1733711040}
---- !u!114 &1024158556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024158552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff0a924222dcda43831134656de1345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMision: {fileID: 325868930}
-  botonDeMisionAcabada: {fileID: 755420490}
 --- !u!1 &1025141634
 GameObject:
   m_ObjectHideFlags: 0
@@ -21081,11 +21066,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1063534946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff0a924222dcda43831134656de1345, type: 3}
+  m_Script: {fileID: 11500000, guid: 65cc2c8adfd143e439b120f2e1d94473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoMision: {fileID: 325868930}
-  botonDeMisionAcabada: {fileID: 755420490}
 --- !u!65 &1063534950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60074,6 +60057,7 @@ MonoBehaviour:
   _gameOver: {fileID: 2910609891596428548}
   _NextLevelObject: {fileID: 1295979814}
   _consejosGameObject: {fileID: 701896764}
+  _buttonQuit: {fileID: 755420490}
   _dialogosNPCFueraTemplo: {fileID: 1685692273}
   _playerVictory: {fileID: 2910609889925943221}
   _continueButton: {fileID: 2910609891502610846}

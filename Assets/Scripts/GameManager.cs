@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
     //devuelve numero de enemigos por zona
     public int NumeroEnemigosZona()
     {
-        Debug.Log(_listOfEnemies.Count);
+
         return _listOfEnemies.Count;
     }
 
@@ -285,6 +285,11 @@ public class GameManager : MonoBehaviour
         this.enabled = false;
     }
 
+    public void SetMisiones(bool enabled)
+    {
+        _myUIManager.SetConsejosButton(enabled);
+        
+    }
     
     public void AumentoTiempo(float extraTime)
     {
@@ -384,6 +389,9 @@ public class GameManager : MonoBehaviour
     //siguiente Nivel
     public void SetNextLevel2()
     {
+        //avisamos que te has pasado el nivel
+        LogicaObjetivosTemplo.GetInstance().SetStateTemploCompleted(true);
+        //activamos panel de te has pasado el nivel
         _myUIManager.SetNextLevel(true);
     }
 

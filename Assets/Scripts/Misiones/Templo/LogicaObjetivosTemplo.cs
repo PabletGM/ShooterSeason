@@ -14,7 +14,30 @@ public class LogicaObjetivosTemplo : MonoBehaviour
 
     #endregion
 
+    #region parameters
+    private bool levelTemploCompleted= false;
+    #endregion
+
     #region methods
+
+
+    static public LogicaObjetivosTemplo GetInstance()
+    {
+        return _instance;
+    }
+
+    //asi poder saber el estado de si nos hemos pasado el templo
+    public bool GetStateTemploCompleted()
+    {
+        return levelTemploCompleted;
+    }
+
+    //para cambiar el estado de si nos hemos pasado el templo
+    public void SetStateTemploCompleted(bool enabled)
+    {
+        levelTemploCompleted = enabled ;
+    }
+
     //aplicamos nueva mision desde fuera del script;
     public void SetNewMission(string newMission)
     {
@@ -31,7 +54,7 @@ public class LogicaObjetivosTemplo : MonoBehaviour
     #endregion
 
     private void Awake()
-    {
+    {    
         if (_instance == null)
         {
             _instance = this;
@@ -41,6 +64,7 @@ public class LogicaObjetivosTemplo : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -52,8 +76,8 @@ public class LogicaObjetivosTemplo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //comprobamos que queden enemigos en el templo
-        if(GameManager.GetInstance().NumeroEnemigosZona() <= 0)
+        //2 condiciones: sino quedan enemigos y no nos hemos pasado el templo
+        if(GameManager.GetInstance().NumeroEnemigosZona() <= 0 && !GetStateTemploCompleted())
         {
             //cambiamos mensaje a 
             textoMision.text = "Coge el contrarreloj para finalizar el nivel 1";
