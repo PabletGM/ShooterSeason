@@ -40,7 +40,7 @@ public class InteractiveSelected : MonoBehaviour
                 }
             }
             //dibujar el rayo
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * distancia, Color.red);
+            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * distancia, Color.red);
         }
         else
         {

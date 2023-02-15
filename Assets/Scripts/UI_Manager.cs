@@ -64,6 +64,9 @@ public class UI_Manager : MonoBehaviour
 
     [SerializeField]
     private protected GameObject _consejosGameObject;
+
+    [SerializeField]
+    private protected GameObject _dialogosNPCFueraTemplo;
     /// <summary>
     /// Reference to object containing objects for Player's Victory
     /// </summary>
@@ -241,6 +244,11 @@ public class UI_Manager : MonoBehaviour
         //ponemos el tiempo a 1
         Time.timeScale = 1;
         
+    }
+
+    public void SetDialogosNPCFueraTemplo(bool dialogo)
+    {
+        _dialogosNPCFueraTemplo.SetActive(dialogo);
     }
     //se inicia el play
     public void Play()

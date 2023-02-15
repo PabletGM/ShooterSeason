@@ -32,7 +32,7 @@ public class DialogueScriptNPC : MonoBehaviour
     void Start()
     {
         dialogueText.text = string.Empty;
-        StartDialogue();
+        
     }
 
     // Update is called once per frame

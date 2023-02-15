@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class ObjetoInteractivo : MonoBehaviour
 {
+    //objeto que posee el dialogo
+    [SerializeField]
+    private GameObject Dialogo;
+    
 
     public void ActivarObjeto()
     {
+        //primero el GameOject Dialogos debe estar activado
+        GameManager.GetInstance().DialogosNPCFueraTemplo(true);
+        //orden de ejecucion de dialogos
+        Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
         //se encargará de empezar los dialogos
         Debug.Log("objeto activado");
+    }
+
+    private void Start()
+    {
+        
     }
 }
 

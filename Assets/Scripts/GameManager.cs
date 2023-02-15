@@ -400,6 +400,13 @@ public class GameManager : MonoBehaviour
         _myFPSMove = GetComponent<FPSMove>();
 
     }
+
+    public void DialogosNPCFueraTemplo(bool dialogos)
+    {
+        _myUIManager.SetDialogosNPCFueraTemplo(dialogos);
+    }
+
+
     /// <summary>
     /// Checks victory and defeat conditions, calling required methods.
     /// Updates time on UI Manager.
