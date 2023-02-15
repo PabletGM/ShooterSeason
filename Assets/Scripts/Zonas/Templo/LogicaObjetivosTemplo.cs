@@ -9,6 +9,8 @@ public class LogicaObjetivosTemplo : MonoBehaviour
     #region references
     public TextMeshProUGUI textoMision;
     public GameObject botonDeMisionAcabada;
+    //singleton
+    static private LogicaObjetivosTemplo _instance;
 
     #endregion
 
@@ -27,6 +29,19 @@ public class LogicaObjetivosTemplo : MonoBehaviour
         botonDeMisionAcabada.SetActive(true);
     }
     #endregion
+
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        //si la instancia existe , destruimos la copia
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
