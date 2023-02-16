@@ -96,12 +96,6 @@ public class EnemyLifeComponent : MonoBehaviour
             {
                 Die1();
             }
-            //si es del nivel 2
-            if (this.gameObject.GetComponent<EnemyController2>())
-            {
-                Die2();
-
-            }
         }
     }
     public void ActualizarVidaEnemigo(int health_Enemy)
@@ -119,13 +113,7 @@ public class EnemyLifeComponent : MonoBehaviour
         Destroy(this.gameObject);
         Debug.Log(this.gameObject.name + " ha muerto");
     }
-    public void Die2()
-    {
-        //se quita al enemigo de la lista 2
-        _myGameManager.OnEnemyDies2(_myEnemyController2);
-        Destroy(this.gameObject);
-        Debug.Log(this.gameObject.name + " ha muerto");
-    }
+   
     public void VidaMaximaEnemigo(int maxhealth_Enemy)
     {
         healthEnemyBar.GetComponent<HealthBarEnemy>().SetEnemyMaxHealth(maxhealth_Enemy);

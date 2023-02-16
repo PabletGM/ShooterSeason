@@ -484,9 +484,9 @@ GameObject:
   - component: {fileID: 8853316139476353070}
   - component: {fileID: 8853316139476353071}
   - component: {fileID: 8853316139476353064}
-  - component: {fileID: 8853316139476353065}
   - component: {fileID: 8853316139476353066}
   - component: {fileID: 8853316139476353067}
+  - component: {fileID: 6436805530607598505}
   m_Layer: 0
   m_Name: torreta
   m_TagString: Untagged
@@ -602,19 +602,6 @@ MonoBehaviour:
   apuntadorTorreta: {fileID: 8853316138906081553}
   _myPlayer: {fileID: 240425587506103725, guid: 9645f7b66ec45cc488b068398fe60bd6,
     type: 3}
---- !u!114 &8853316139476353065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8853316139476353077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52133d8301c8b14a9b69139ca0aebd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _myApuntador: {fileID: 8853316138906081553}
 --- !u!114 &8853316139476353066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,6 +634,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!114 &6436805530607598505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853316139476353077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d88a45ee4d5ab48be3114758b353a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _randomImpulse: 1
+  fuerzaEmpuje: 0
+  _myApuntador: {fileID: 8853316138906081553}
 --- !u!1 &8853316139547561822
 GameObject:
   m_ObjectHideFlags: 0

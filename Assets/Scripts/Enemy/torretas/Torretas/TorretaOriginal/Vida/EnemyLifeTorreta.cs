@@ -27,7 +27,7 @@ public class EnemyLifeTorreta : MonoBehaviour
     /// <summary>
     /// Reference to local EnemyController.
     /// </summary>
-    private EnemyController2 _myEnemyController2;
+    private EnemyController _myEnemyController;
     /// <summary>
     /// Reference to local Transform.
     /// </summary>
@@ -97,7 +97,7 @@ public class EnemyLifeTorreta : MonoBehaviour
     public void Die()
     {
         //se quita al enemigo de la lista
-        _myGameManager.OnEnemyDies2(_myEnemyController2);
+        _myGameManager.OnEnemyDies(_myEnemyController);
         Destroy(this.gameObject);
         Debug.Log(this.gameObject.name + " ha muerto");
     }
@@ -118,7 +118,7 @@ public class EnemyLifeTorreta : MonoBehaviour
     {
 
         _myGameManager = GameManager.GetInstance();
-        _myEnemyController2 = GetComponent<EnemyController2>();
+        _myEnemyController = GetComponent<EnemyController>();
 
 
         //ponemos vida maxima tanto en barra de vida como jugador

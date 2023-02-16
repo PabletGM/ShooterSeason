@@ -7,6 +7,9 @@ public class EventosZonaNPC : MonoBehaviour
 
     #region references
     private LogicaObjetivosTemplo logicaMisiones;
+
+    [SerializeField]
+    private protected GameObject zonadesfiladeroDesbloqueada;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -26,7 +29,8 @@ public class EventosZonaNPC : MonoBehaviour
             GameManager.GetInstance().SetMisiones(true);
             //si detecta a jugador damos nueva señal para cambio de mision
             LogicaObjetivosTemplo.GetInstance().SetNewMission("Interactua con el NPC");
-
+            //desbloqueamos zona desfiladero y su BoxCollider para que se pueda hacer recuento enemigos
+            zonadesfiladeroDesbloqueada.GetComponent<BoxCollider>().enabled=true;
 
         }
     }

@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// List containing all live enemies of second level
     /// </summary>
-    private List<EnemyController2> _listOfEnemies2;
+    //private List<EnemyController2> _listOfEnemies2;
     /// <summary>
     /// Remaining time to finish match.
     /// </summary>
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
 
         //iniciamos la lista
         _listOfEnemies = new List<EnemyController>();
-        _listOfEnemies2 = new List<EnemyController2>();
+        //_listOfEnemies2 = new List<EnemyController2>();
 
     }
 
@@ -138,11 +138,11 @@ public class GameManager : MonoBehaviour
     /// Public method for enemies to register on Game Manager.
     /// </summary>
     /// <param name="enemyToAdd"></param>
-    public void RegisterEnemyLevel1(EnemyController enemyToAdd)
-    {
-        //añadir un enemigo a la lista
-        _listOfEnemies.Add(enemyToAdd);
-    }
+    //public void RegisterEnemyLevel1(EnemyController enemyToAdd)
+    //{
+    //    //añadir un enemigo a la lista
+    //    _listOfEnemies.Add(enemyToAdd);
+    //}
 
     //añade 1 enemigo a la lista
     public void AddEnemy(EnemyController enemyToAdd)
@@ -159,11 +159,11 @@ public class GameManager : MonoBehaviour
         return _listOfEnemies.Count;
     }
 
-    public void RegisterEnemyLevel2(EnemyController2 enemyToAdd2)
-    {
-        //añadir un enemigo a la lista
-        _listOfEnemies2.Add(enemyToAdd2);
-    }
+    //public void RegisterEnemyLevel2(EnemyController2 enemyToAdd2)
+    //{
+    //    //añadir un enemigo a la lista
+    //    _listOfEnemies2.Add(enemyToAdd2);
+    //}
     /// <summary>
     /// Public method to manage enemies death level 1.
     /// </summary>
@@ -180,14 +180,14 @@ public class GameManager : MonoBehaviour
     /// Public method to manage enemies death level 1.
     /// </summary>
     /// <param name="deadEnemy"></param>
-    public void OnEnemyDies2(EnemyController2 deadEnemy2)
-    {
-        //TODO
-        //quitar un enemigo a la lista dfel nivel 2
-        _listOfEnemies2.Remove(deadEnemy2);
-        //actualizas el numero de enemigos restantes del nivel 2
-        _myUIManager.UpdateEnemiesLeft(_listOfEnemies2.Count);
-    }
+    //public void OnEnemyDies2(EnemyController2 deadEnemy2)
+    //{
+    //    //TODO
+    //    //quitar un enemigo a la lista dfel nivel 2
+    //    _listOfEnemies2.Remove(deadEnemy2);
+    //    //actualizas el numero de enemigos restantes del nivel 2
+    //    _myUIManager.UpdateEnemiesLeft(_listOfEnemies2.Count);
+    //}
     public void SETPLAYER(GameObject _myplayer)
     {
         _player = _myplayer;
@@ -198,10 +198,10 @@ public class GameManager : MonoBehaviour
     }
     
     //actualizas numero de enemigos al coger objeto que para el tiempo diciendo los enemios de la ruta libre 
-    public void NumEnemiesLevel2()
-    {
-        _myUIManager.UpdateEnemiesLeft(_listOfEnemies2.Count);
-    }
+    //public void NumEnemiesLevel2()
+    //{
+    //    _myUIManager.UpdateEnemiesLeft(_listOfEnemies2.Count);
+    //}
    
     /// <summary>
     /// Public method to manage player being hurted.
@@ -344,18 +344,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void StartMatch()
     {
-        //inicializas enemigos level 1
-        for (int i = 0; i < _listOfEnemies.Count; i++)
-        {
-            //de la lista de enemigos podemos llamar a el metodo de el script EnemyController
-            _listOfEnemies[i].StartEnemy();
-        }
-        //inicializas enemigos level2
-        for (int i = 0; i < _listOfEnemies2.Count; i++)
-        {
-            //de la lista de enemigos podemos llamar a el metodo de el script EnemyController
-            _listOfEnemies2[i].StartEnemy();
-        }
+        ////inicializas enemigos level 1
+        //for (int i = 0; i < _listOfEnemies.Count; i++)
+        //{
+        //    //de la lista de enemigos podemos llamar a el metodo de el script EnemyController
+        //    _listOfEnemies[i].StartEnemy();
+        //}
+        
         
         //inicializas las variables tiempo de partida , vidas de jugador y enemigos restantes
         _myUIManager.VidaMaximaJugador(maxHealth);
@@ -382,6 +377,14 @@ public class GameManager : MonoBehaviour
         //quitamos EnemiesLeft de arriba por ahora
         _myUIManager.SetEnemiesLeft(false);
         
+    }
+
+    public void SetEnemiesLeft(bool enemiesLeftcanvas)
+    {
+        //activamos en canvas enemiesLeft
+        _myUIManager.SetEnemiesLeft(enemiesLeftcanvas);
+        //los actualizamos en pantalla
+        _myUIManager.UpdateEnemiesLeft(_listOfEnemies.Count);
     }
 
    

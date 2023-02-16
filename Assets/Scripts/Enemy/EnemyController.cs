@@ -32,7 +32,7 @@ public class EnemyController : MonoBehaviour
 
     GameManager _myGameManager;
 
-    
+    private EventosDesfiladeroDrones eventosDesfiladero;
     private EventosZonaTemplo eventosZoneTemplo;
 
     #endregion
@@ -68,8 +68,14 @@ public class EnemyController : MonoBehaviour
     {
         eventosZoneTemplo.AñadirEnemigo(this);
     }
+
+    //pasa la instancia de EnemyController a EventosDesfiladeroDrones
+    public void NewEnemyZonaDesfiladero()
+    {
+        eventosDesfiladero.AñadirEnemigo(this);
+    }
     #endregion
-   
+
 
     /// <summary>
     /// Initialization includes:
@@ -83,6 +89,8 @@ public class EnemyController : MonoBehaviour
         _myGameManager = GameManager.GetInstance();
         //se busca GameObject con componente y se asocia
         eventosZoneTemplo = GameObject.Find("TemploTimer").GetComponent<EventosZonaTemplo>();
+        //se busca GameObject con componente y se asocia
+        eventosDesfiladero = GameObject.Find("DesfiladeroDrones").GetComponent<EventosDesfiladeroDrones>();
         //_myGameManager.RegisterEnemyLevel1(this);
         _myRigidBody = GetComponent<Rigidbody>();
     }

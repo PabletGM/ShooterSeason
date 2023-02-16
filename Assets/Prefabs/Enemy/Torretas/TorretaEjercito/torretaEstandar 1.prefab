@@ -479,10 +479,10 @@ GameObject:
   - component: {fileID: 2466224099941360978}
   - component: {fileID: 5851484627513088595}
   - component: {fileID: 6075557296710794094}
-  - component: {fileID: 7911243217277504264}
   - component: {fileID: 7797114123412579532}
   - component: {fileID: 1062879797013701490}
   - component: {fileID: 2570238388009766554}
+  - component: {fileID: 1111725686347374355}
   m_Layer: 0
   m_Name: Turret with panels
   m_TagString: Untagged
@@ -538,19 +538,6 @@ MonoBehaviour:
     type: 3}
   apuntadorTorreta: {fileID: 224675443166084995}
   _myPlayer: {fileID: 0}
---- !u!114 &7911243217277504264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2986477454802255848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52133d8301c8b14a9b69139ca0aebd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _myApuntador: {fileID: 224675443166084995}
 --- !u!65 &7797114123412579532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -596,6 +583,21 @@ MonoBehaviour:
   _deadLineHeight: -10
   healthTorretBar: {fileID: 0}
   _myText: {fileID: 0}
+--- !u!114 &1111725686347374355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2986477454802255848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99d88a45ee4d5ab48be3114758b353a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _randomImpulse: 1
+  fuerzaEmpuje: 0
+  _myApuntador: {fileID: 0}
 --- !u!1 &3291611563111005221
 GameObject:
   m_ObjectHideFlags: 0
