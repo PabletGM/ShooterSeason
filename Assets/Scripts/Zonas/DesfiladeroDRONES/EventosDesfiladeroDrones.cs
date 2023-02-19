@@ -5,6 +5,16 @@ using UnityEngine;
 public class EventosDesfiladeroDrones : MonoBehaviour
 {
     #region methods
+    //devuelve estado booleano
+    public bool GetOcultarEnemigos()
+    {
+        return ocultarEnemigos;
+    }
+
+    public void SetOcultarEnemigos(bool ocultar)
+    {
+        ocultarEnemigos = ocultar;
+    }
 
     public void AñadirEnemigo(EnemyController enemyController)
     {
@@ -27,6 +37,10 @@ public class EventosDesfiladeroDrones : MonoBehaviour
 
     #endregion
 
+    #region parameters
+    private bool ocultarEnemigos = false;
+    #endregion
+
     void Start()
     {  
         //reinicia lista de enemigos
@@ -36,13 +50,12 @@ public class EventosDesfiladeroDrones : MonoBehaviour
     //comprueba que quedan enemigos en la zona
     void Update()
     {
-        //se pasa de nivel
-        //if (GameManager.GetInstance().NumeroEnemigosZona() <= 0)
-        //{
-
-        //    //se destruye este script y el gameObject
-        //    Destroy(this.gameObject);
-        //}
+        //si el booleano ocultar es true, y no quedan enemigos en la zona =  ocultamos el numero de enemies
+        if(GetOcultarEnemigos() && GameManager.GetInstance().NumeroEnemigosZona()<=0)
+        {
+            //ocultar panel enemigos
+            GameManager.GetInstance().SetEnemiesLeft(false);
+        }
     }
     //trigger de zona
     private void OnTriggerEnter(Collider collision)
@@ -54,6 +67,8 @@ public class EventosDesfiladeroDrones : MonoBehaviour
             if (this.GetComponent<BoxCollider>().enabled == true)
             {
                 collision.gameObject.GetComponent<EnemyController>().NewEnemyZonaDesfiladero();
+                //cuando ya exista el primer enemigo podemos poner el booleano a true para que se pueda cumplir la condicion del update al acabar con estos
+                SetOcultarEnemigos(true);
             }
         }
 
@@ -68,5 +83,7 @@ public class EventosDesfiladeroDrones : MonoBehaviour
             //activa enemigos
             GameManager.GetInstance().SetEnemiesLeft(true);
         }
+
+        //el booleano será true sino quedan enemigos
     }
 }
