@@ -35279,6 +35279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1516316632}
   - component: {fileID: 1516316633}
+  - component: {fileID: 1516316634}
   m_Layer: 0
   m_Name: TriggerCinematica
   m_TagString: Untagged
@@ -35308,11 +35309,70 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516316631}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 6.17852, z: 14.03063}
   m_Center: {x: 0.0000009950902, y: 1.3428669, z: 1.0998116}
+--- !u!114 &1516316634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516316631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efe5883ef994cb459a53213b56aed7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 976806411635989548}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 316668603}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2038112816}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1422742830}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1520230418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51214,6 +51274,7 @@ GameObject:
   - component: {fileID: 2038112813}
   - component: {fileID: 2038112816}
   - component: {fileID: 2038112815}
+  - component: {fileID: 2038112817}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -51307,8 +51368,83 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 712502064659202699, guid: 83cfecfba28cdfb40981d0e4678047ba, type: 2}
     value: {fileID: 2038112815}
+  - key: {fileID: 8803886628667802060, guid: 83cfecfba28cdfb40981d0e4678047ba, type: 2}
+    value: {fileID: 2038112812}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &2038112817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038112812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 70a9638a2456ff249b7ed697a7f76bb5, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 316668603}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2038112812}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 976806411635989548}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1516316633}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1422742830}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1001 &2039566713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62909,17 +63045,17 @@ PrefabInstance:
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 246.67
+      value: 345.65
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 84.82
+      value: 22.379
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 264.95
+      value: 267.57
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
