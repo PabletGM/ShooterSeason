@@ -38405,7 +38405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1657835226}
   m_Layer: 0
-  m_Name: Jugadores
+  m_Name: Jugador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63045,17 +63045,17 @@ PrefabInstance:
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 345.65
+      value: 250.52
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.379
+      value: 84.624
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 267.57
+      value: 263.49
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
