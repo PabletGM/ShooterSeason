@@ -55,6 +55,7 @@ public class EventosDesfiladeroDrones : MonoBehaviour
         {
             //ocultar panel enemigos
             GameManager.GetInstance().SetEnemiesLeft(false);
+            LogicaObjetivosTemplo.GetInstance().SetNewMission("Continua por la pradera");
         }
     }
     //trigger de zona

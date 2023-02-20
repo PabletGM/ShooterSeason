@@ -99,6 +99,7 @@ public class DialogueScriptNPC : MonoBehaviour
             else if(this.gameObject.name == "PanelDialogue2")
             {
                 GameManager.GetInstance().QuitarDialogosNPCPradera(false);
+                LogicaObjetivosTemplo.GetInstance().SetNewMission("Avanza hasta Pueblo Helado");
             }
            
             //desactivamos panel de texto
