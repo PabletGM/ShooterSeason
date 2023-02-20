@@ -7,7 +7,7 @@ public class EjecutorCinematicaCuernos : MonoBehaviour
 {
     //creamos un evento
     [SerializeField]
-    private UnityEvent evento;
+    private protected UnityEvent evento;
 
     private void OnTriggerEnter(Collider other)
     {

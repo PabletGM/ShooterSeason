@@ -426,6 +426,19 @@ public class GameManager : MonoBehaviour
         _myUIManager.SetDialogosNPCFueraTemplo(dialogos);
     }
 
+    public void DialogosNPCPradera(bool dialogos)
+    {
+        //quitar elementos sobrantes de la pantalla interfaz jugador,miniMapa,Mirilla
+        _myUIManager.Mirilla(false);
+        _myUIManager.MiniMapa(false);
+        //el Presiona E para interactuar fuera
+        _myUIManager.SetPresionaEparaInteractuar(false);
+        //activar modoMenus
+        _myCursor = true;
+        //activarDialogos
+        _myUIManager.SetDialogosNPCPradera(dialogos);
+    }
+
     public void QuitarDialogosNPCFueraTemplo(bool dialogos)
     {
         //poner elementos sobrantes de la pantalla interfaz jugador,miniMapa,Mirilla
@@ -441,6 +454,23 @@ public class GameManager : MonoBehaviour
 
         //una vez que se ha interactuado con dron ponemos nueva mision
         LogicaObjetivosTemplo.GetInstance().SetNewMission("Continua por el desfiladero");
+    }
+
+    public void QuitarDialogosNPCPradera(bool dialogos)
+    {
+        //poner elementos sobrantes de la pantalla interfaz jugador,miniMapa,Mirilla
+        _myUIManager.Mirilla(true);
+        _myUIManager.MiniMapa(true);
+        //el Presiona E para interactuar dentro
+        _myUIManager.SetPresionaEparaInteractuar(true);
+        //desactivar modoMenus
+        _myCursor = false;
+        //activarDialogos
+        _myUIManager.SetDialogosNPCPradera(dialogos);
+
+
+        //una vez que se ha interactuado con dron ponemos nueva mision
+        LogicaObjetivosTemplo.GetInstance().SetNewMission("Avanza hasta 'Pueblo Hielo'");
     }
 
 

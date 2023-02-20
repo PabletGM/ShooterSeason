@@ -90,8 +90,17 @@ public class DialogueScriptNPC : MonoBehaviour
         else
         {
             dialogueText.text = string.Empty;
-            //antes de quitar dialogos, ponemos todo como estaba antes
-            GameManager.GetInstance().QuitarDialogosNPCFueraTemplo(false);
+            //antes de quitar dialogos,miramos que NPC es,si es gameObject PanelDialogue es NPCTemplo , si es gameObject PanelDialogue2 es NPCPradera
+            if(this.gameObject.name == "PanelDialogue")
+            {
+                GameManager.GetInstance().QuitarDialogosNPCFueraTemplo(false);
+            }
+            //NPC Pradera
+            else if(this.gameObject.name == "PanelDialogue2")
+            {
+                GameManager.GetInstance().QuitarDialogosNPCPradera(false);
+            }
+           
             //desactivamos panel de texto
             //gameObject.SetActive(false);
         }

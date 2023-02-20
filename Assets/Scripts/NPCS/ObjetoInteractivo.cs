@@ -12,7 +12,19 @@ public class ObjetoInteractivo : MonoBehaviour
     public void ActivarObjeto()
     {
         //primero el GameOject Dialogos debe estar activado
-        GameManager.GetInstance().DialogosNPCFueraTemplo(true);
+        //distincion entre NPCS para llamar a un metodo o otro
+
+        //si es NPC al lado del templo
+        if(this.gameObject.name == "dronNPC")
+        {
+            GameManager.GetInstance().DialogosNPCFueraTemplo(true);
+        }
+        //si es NPC pradera
+        else if(this.gameObject.name == "dronNPC2")
+        {
+            GameManager.GetInstance().DialogosNPCPradera(true);
+        }
+       
         //orden de ejecutar dialogos
         Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
         //se encargará de empezar los dialogos
