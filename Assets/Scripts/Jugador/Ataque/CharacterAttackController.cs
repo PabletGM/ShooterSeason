@@ -74,7 +74,7 @@ public class CharacterAttackController : MonoBehaviour
         RaycastHit hit;
         
         //si detecta algo
-        if (Physics.Raycast(_shotOriginTransform.position , _shotOriginTransform.forward , out hit , 100))
+        if (Physics.Raycast(_shotOriginTransform.position , _shotOriginTransform.forward , out hit , 1000))
         {
             //de a lo que dé de decimos su nombre
             //Debug.Log(hit.transform.name);

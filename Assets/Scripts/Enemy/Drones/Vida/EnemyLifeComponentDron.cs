@@ -69,12 +69,7 @@ public class EnemyLifeComponentDron : MonoBehaviour
             _myEnemyController.Boost(3);
         }
 
-        //si es enemigo nivel 2
-        if (this.gameObject.GetComponent<EnemyController2>())
-        {
-            //se le aplica un impulso
-            _myEnemyController2.Boost(3);
-        }
+       
 
 
     }

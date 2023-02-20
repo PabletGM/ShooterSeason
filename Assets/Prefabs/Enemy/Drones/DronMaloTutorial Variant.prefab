@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 3094089078371771910, guid: 1d15728ba480ea9448872a9eac8d1039,
         type: 3}
       propertyPath: m_CollisionDetection
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3094089078371771910, guid: 1d15728ba480ea9448872a9eac8d1039,
         type: 3}
