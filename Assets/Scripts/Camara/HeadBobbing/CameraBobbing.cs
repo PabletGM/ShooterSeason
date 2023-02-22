@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,9 +19,9 @@ public class CameraBobbing : MonoBehaviour
         //velocidad del efecto
         public float bobbingFrequency = 5f;
         //amplitud horizontal y vertical
-        public float bobbingHorizontalAmplitude = 0.1f;
+        public double bobbingHorizontalAmplitude = 0.1f;
         //suavidad del movimiento
-        public float bobbingVerticalAmplitude = 0.1f;
+        public double bobbingVerticalAmplitude = 0.1f;
 
         [Range(0, 1)] public float headbobbingSmooth = 0.1f;
 
@@ -59,8 +60,8 @@ public class CameraBobbing : MonoBehaviour
 
     private Vector3 CalculateHeadBobOffset(float t)
     {
-        float horizontalOffset = 0;
-        float verticalOffset = 0;
+        double horizontalOffset = 0;
+        double verticalOffset = 0;
         Vector3 offset = Vector3.zero;
 
         if(t>0)
@@ -69,10 +70,24 @@ public class CameraBobbing : MonoBehaviour
             horizontalOffset = Mathf.Cos(t * bobbingFrequency) * bobbingHorizontalAmplitude;
             verticalOffset = Mathf.Sin(t * bobbingFrequency*2) * bobbingVerticalAmplitude;
 
+            //transformar a float
+            float hor = Convert.ToSingle(horizontalOffset);
+            float vert = Convert.ToSingle(verticalOffset);
             //con los offsets o distancias en cuanto a la posicion de la cabeza ahora calculamos donde irá en este segundo t la camara
-            offset = HeadTransform.right * horizontalOffset + HeadTransform.up * verticalOffset;
+            offset = HeadTransform.right * hor + HeadTransform.up * vert;
         }
         //devolvemos ese vector 3;
         return offset;
     }
+
+    //cuando corremos mas cabeceo
+    public void SetAmplitude(double amplitude)
+    {
+       
+        //si corremos amplitude es 0.3 , si andamos es 0.1
+        bobbingHorizontalAmplitude = amplitude;
+        bobbingVerticalAmplitude = amplitude;
+    }
+
+   
 }

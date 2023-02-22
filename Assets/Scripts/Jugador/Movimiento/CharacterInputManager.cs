@@ -149,12 +149,17 @@ public class CharacterInputManager : MonoBehaviour
         //vemos si está pulsado vertical  o horizontal>0 esto es pulsar w y  e para esprintar y llamar a metodo que cambie velocidad en CharacterMovementManager, para dejar la tecl pulsada es input.GetKey
         if (_verticalInput>0 && Input.GetKey(KeyCode.LeftShift) || _horizontalInput> 0 && Input.GetKey(KeyCode.LeftShift))
         {
+            //ponemos el cameraBobbing de correr
+            _myCameraBobbing.SetAmplitude(0.3);
             //llamamos a metodo pasando bool sprint
             _myCharacterMovementManager.SetSprintVelocity();
             //vemos en que material está
         }
         else
         {
+            //ponemos el cameraBobbing de andar
+            _myCameraBobbing.SetAmplitude(0.1);
+            //andamos
             _myCharacterMovementManager.SetWalkVelocity();
         }
 

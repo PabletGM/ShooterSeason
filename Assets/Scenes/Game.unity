@@ -64111,6 +64111,11 @@ PrefabInstance:
       propertyPath: _jumpSpeed
       value: 3.3
       objectReference: {fileID: 0}
+    - target: {fileID: 698846958539057031, guid: 6eccdfae647642343ac92dc69e7896e5,
+        type: 3}
+      propertyPath: _mySprintSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 974282213676860748, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_Layer
