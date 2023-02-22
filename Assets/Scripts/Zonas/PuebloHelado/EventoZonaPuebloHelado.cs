@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventosDesfiladeroDrones : MonoBehaviour
+public class EventoZonaPuebloHelado : MonoBehaviour
 {
     #region methods
     //devuelve estado booleano
@@ -21,10 +21,10 @@ public class EventosDesfiladeroDrones : MonoBehaviour
         GameManager.GetInstance().AddEnemy(enemyController);
     }
     //limites que impiden volver a atrás a activar viejos colliders
-    private void AñadirLimitesAntesDesfiladero()
+    private void AñadirLimitesPuebloHielo()
     {
         Debug.Log("limites añadidos");
-        limitesNivelDesfiladero.SetActive(true);
+        limitesPuebloHielo.SetActive(true);
     }
 
     #endregion
@@ -33,7 +33,7 @@ public class EventosDesfiladeroDrones : MonoBehaviour
 
 
     [SerializeField]
-    private protected GameObject limitesNivelDesfiladero;
+    private protected GameObject limitesPuebloHielo;
 
     #endregion
 
@@ -42,22 +42,22 @@ public class EventosDesfiladeroDrones : MonoBehaviour
     #endregion
 
     void Start()
-    {  
+    {
         //reinicia lista de enemigos
         GameManager.GetInstance().ResetEnemies();
+        //activar numero enemigos
+        GameManager.GetInstance().SetEnemiesLeft(true);
     }
 
     //comprueba que quedan enemigos en la zona
     void Update()
     {
         //si el booleano ocultar es true, y no quedan enemigos en la zona =  ocultamos el numero de enemies
-        if(GetOcultarEnemigos() && GameManager.GetInstance().NumeroEnemigosZona()<=0)
+        if (GetOcultarEnemigos() && GameManager.GetInstance().NumeroEnemigosZona() <= 0)
         {
             //ocultar panel enemigos
             GameManager.GetInstance().SetEnemiesLeft(false);
-            LogicaObjetivosTemplo.GetInstance().SetNewMission("Continua por la pradera");
-            //desactivamos gameObject
-            this.enabled = false;
+            
         }
     }
     //trigger de zona
@@ -69,7 +69,7 @@ public class EventosDesfiladeroDrones : MonoBehaviour
             //llamará al metodo de ese enemigo y de ese script EnemyController si el boxCollider esta activo
             if (this.GetComponent<BoxCollider>().enabled == true)
             {
-                collision.gameObject.GetComponent<EnemyController>().NewEnemyZonaDesfiladero();
+                collision.gameObject.GetComponent<EnemyController>().NewEnemyZonaPuebloHelado();
                 //cuando ya exista el primer enemigo podemos poner el booleano a true para que se pueda cumplir la condicion del update al acabar con estos
                 SetOcultarEnemigos(true);
             }
@@ -80,13 +80,14 @@ public class EventosDesfiladeroDrones : MonoBehaviour
         {
             Debug.Log("Entró jugador");
             //activando nivel Desfiladero
-            Invoke("AñadirLimitesAntesDesfiladero", 1.0f);
+            Invoke("AñadirLimitesPuebloHielo", 1.0f);
             //si detecta a jugador damos nueva señal para cambio de mision
-            LogicaObjetivosTemplo.GetInstance().SetNewMission("Acaba con los enemigos del Desfiladero");
+            LogicaObjetivosTemplo.GetInstance().SetNewMission("Acaba con los enemigos del Pueblo Hielo");
             //activa enemigos
             GameManager.GetInstance().SetEnemiesLeft(true);
         }
 
         //el booleano será true sino quedan enemigos
     }
+
 }

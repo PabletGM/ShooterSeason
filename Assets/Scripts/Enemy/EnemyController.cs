@@ -33,6 +33,7 @@ public class EnemyController : MonoBehaviour
     GameManager _myGameManager;
 
     private EventosDesfiladeroDrones eventosDesfiladero;
+    private EventoZonaPuebloHelado eventosPuebloHelado;
     private EventosZonaTemplo eventosZoneTemplo;
 
     #endregion
@@ -74,6 +75,13 @@ public class EnemyController : MonoBehaviour
     {
         eventosDesfiladero.AñadirEnemigo(this);
     }
+
+
+    //pasa la instancia de EnemyController a EventosZonaPuebloHelado
+    public void NewEnemyZonaPuebloHelado()
+    {
+        eventosPuebloHelado.AñadirEnemigo(this);
+    }
     #endregion
 
 
@@ -91,6 +99,8 @@ public class EnemyController : MonoBehaviour
         eventosZoneTemplo = GameObject.Find("TemploTimer").GetComponent<EventosZonaTemplo>();
         //se busca GameObject con componente y se asocia
         eventosDesfiladero = GameObject.Find("DesfiladeroDrones").GetComponent<EventosDesfiladeroDrones>();
+        //se busca GameObject con componente y se asocia
+        eventosPuebloHelado = GameObject.Find("PuebloHelado").GetComponent<EventoZonaPuebloHelado>();
         //_myGameManager.RegisterEnemyLevel1(this);
         _myRigidBody = GetComponent<Rigidbody>();
     }

@@ -2996,7 +2996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 122941107}
   m_Layer: 0
-  m_Name: Camino
+  m_Name: CaminoDesfiladero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3016,8 +3016,9 @@ Transform:
   - {fileID: 1035416159}
   - {fileID: 970787406}
   - {fileID: 1318081594}
+  - {fileID: 740900779}
   m_Father: {fileID: 488754816}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &123074798
 PrefabInstance:
@@ -6407,6 +6408,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279180735}
   m_CullTransparentMesh: 0
+--- !u!1 &281939553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281939554}
+  m_Layer: 0
+  m_Name: Templo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &281939554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281939553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2003783291}
+  - {fileID: 1271275145}
+  - {fileID: 1733711041}
+  - {fileID: 439670603}
+  m_Father: {fileID: 488754816}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &285122441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8969,12 +9004,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439670602}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 242.35, y: 105.65, z: 201}
   m_LocalScale: {x: 3.5572343, y: 4.6807, z: 3.812664}
   m_Children: []
-  m_Father: {fileID: 488754816}
-  m_RootOrder: 5
+  m_Father: {fileID: 281939554}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &439670604
 BoxCollider:
@@ -10098,13 +10133,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2003783291}
-  - {fileID: 619489835}
   - {fileID: 122941107}
-  - {fileID: 1271275145}
-  - {fileID: 1733711041}
-  - {fileID: 439670603}
-  - {fileID: 740900779}
+  - {fileID: 281939554}
+  - {fileID: 1952126647}
+  - {fileID: 1706490749}
   m_Father: {fileID: 1403680451}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12700,8 +12732,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619489834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.7, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.7000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2108739561}
@@ -12710,8 +12742,8 @@ Transform:
   - {fileID: 780089643}
   - {fileID: 2101948323}
   - {fileID: 1341371577}
-  m_Father: {fileID: 488754816}
-  m_RootOrder: 1
+  m_Father: {fileID: 1952126647}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &623760546
 PrefabInstance:
@@ -15194,8 +15226,8 @@ Transform:
   m_LocalPosition: {x: 288.07, y: 82.51, z: 167.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 488754816}
-  m_RootOrder: 6
+  m_Father: {fileID: 122941107}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &740900780
 BoxCollider:
@@ -27195,7 +27227,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271275144}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -27207,8 +27239,8 @@ Transform:
   - {fileID: 1259672313}
   - {fileID: 2046742196}
   - {fileID: 1772193198}
-  m_Father: {fileID: 488754816}
-  m_RootOrder: 3
+  m_Father: {fileID: 281939554}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272163452
 GameObject:
@@ -35549,7 +35581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1473631308}
   m_Layer: 0
-  m_Name: MAPA2
+  m_Name: MAPA2-Pueblo Hielo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36627,6 +36659,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  zonaPuebloHieloDesbloqueada: {fileID: 1536136728}
 --- !u!1001 &1520230418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37108,8 +37141,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1536136729}
+  - component: {fileID: 1536136730}
+  - component: {fileID: 1536136731}
   m_Layer: 0
-  m_Name: Pueblo
+  m_Name: PuebloHelado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37123,12 +37158,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536136728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 414.5, y: 184.8, z: 479}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1414984745}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1536136730
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536136728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 153.90497, y: 40.524696, z: 92.08209}
+  m_Center: {x: 0.7406006, y: -4.8831177, z: 14.274139}
+--- !u!114 &1536136731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536136728}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85cca9ee868f63a469cca30e967c69ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitesPuebloHielo: {fileID: 1763949826}
 --- !u!1 &1538927014
 GameObject:
   m_ObjectHideFlags: 0
@@ -41379,6 +41440,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c4ff04d0f8413e4c8beb0e8cb7f53bf, type: 3}
+--- !u!1 &1706490748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706490749}
+  m_Layer: 0
+  m_Name: PuebloHelado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1706490749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706490748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1763949827}
+  m_Father: {fileID: 488754816}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1708400099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42179,12 +42271,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733711040}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 249, y: 109.65, z: 247}
   m_LocalScale: {x: 4.438, y: 1.9752, z: 3.7412}
   m_Children: []
-  m_Father: {fileID: 488754816}
-  m_RootOrder: 4
+  m_Father: {fileID: 281939554}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1733711042
 BoxCollider:
@@ -42822,6 +42914,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1760022619}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1763949826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763949827}
+  - component: {fileID: 1763949828}
+  m_Layer: 0
+  m_Name: LimitesPuebloHelado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1763949827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763949826}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 410.63, y: 43.59, z: 329.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1706490749}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1763949828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763949826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 61.794434, y: 12.600064, z: 1}
+  m_Center: {x: 0.051727295, y: 2.1840224, z: 0}
 --- !u!1 &1764004379
 GameObject:
   m_ObjectHideFlags: 0
@@ -51131,6 +51267,37 @@ Transform:
   m_Father: {fileID: 717188404}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1 &1952126646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952126647}
+  m_Layer: 0
+  m_Name: NPCFueraTemplo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1952126647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952126646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 619489835}
+  m_Father: {fileID: 488754816}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1953268689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52301,7 +52468,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003783290}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -52315,7 +52482,7 @@ Transform:
   - {fileID: 842276194}
   - {fileID: 957155954}
   - {fileID: 944390162}
-  m_Father: {fileID: 488754816}
+  m_Father: {fileID: 281939554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2013448272
