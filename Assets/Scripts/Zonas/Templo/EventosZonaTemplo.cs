@@ -19,7 +19,7 @@ public class EventosZonaTemplo : MonoBehaviour
 
     private void AñadirLimitesLevel1()
     {
-        Debug.Log("limites añadidos");
+        //Debug.Log("limites añadidos");
         limitesNivel1.SetActive(true);
     }
 
@@ -66,7 +66,7 @@ public class EventosZonaTemplo : MonoBehaviour
         //si entra jugador avisa y activa paredes invisibles de la zona 1 , no se podrá salir ya de esta, asi evitamos que algun enemigo salga y vuelva a entrar detectandolo 2 veces el collider y jodiendo el registro de enemigos
         if (collision.gameObject.GetComponent<PlayerLifeComponent>())
         {
-            Debug.Log("Entro jugador");
+
             //activando nivel 1
             Invoke("AñadirLimitesLevel1", 2.0f);
             //si detecta a jugador damos nueva señal para cambio de mision

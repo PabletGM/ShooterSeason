@@ -82,7 +82,7 @@ public class EnemyLifeComponentDron : MonoBehaviour
     public void Damage()
     {
         //si tiene vida se le quita 1 vida
-        Debug.Log("Has infligido daño al dron");
+        //Debug.Log("Has infligido daño al dron");
         //le quitamos 1 vida
         _currentLife -= _hitDamage;
         //actualizamos barra de vida
@@ -114,7 +114,7 @@ public class EnemyLifeComponentDron : MonoBehaviour
         //se quita al enemigo de la lista
         _myGameManager.OnEnemyDies(_myEnemyController);
         Destroy(this.gameObject);
-        Debug.Log(this.gameObject.name + " ha muerto");
+        //Debug.Log(this.gameObject.name + " ha muerto");
     }
 
     public void VidaMaximaDronEnemigo(int maxhealth_Enemy)

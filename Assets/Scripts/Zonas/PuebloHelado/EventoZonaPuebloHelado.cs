@@ -45,7 +45,6 @@ public class EventoZonaPuebloHelado : MonoBehaviour
     {
         //reinicia lista de enemigos
         GameManager.GetInstance().ResetEnemies();
-        //activar numero enemigos
         
     }
 
@@ -57,7 +56,10 @@ public class EventoZonaPuebloHelado : MonoBehaviour
         {
             //ocultar panel enemigos
             GameManager.GetInstance().SetEnemiesLeft(false);
-            
+            //quitamos limites pueblo helado para poder ir al portal
+            limitesPuebloHielo.SetActive(false);
+            //establecemos nueva mision
+            LogicaObjetivosTemplo.GetInstance().SetNewMission("Vuelve a la pradera y entra al portal");
         }
     }
     //trigger de zona
