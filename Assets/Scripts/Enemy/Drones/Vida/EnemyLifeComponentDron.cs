@@ -10,7 +10,7 @@ public class EnemyLifeComponentDron : MonoBehaviour
     /// Life parameter for enemy.
     /// </summary>
     [SerializeField]
-    public int _maxLife = 300;
+    public int _maxLife = 100;
     /// <summary>
     /// Life points lost when character receives damage.
     /// </summary>
