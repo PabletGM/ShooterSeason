@@ -44,7 +44,7 @@ public class PlayerLifeComponent : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit hit)
     {  
         //si el objeto con el que choca el jugador es el enemigo bola,dron o torreta que tiene que haber una invencibilidad durnate un tiempo
-        if (hit.collider.gameObject.GetComponent<EnemyLifeComponent>()||hit.collider.gameObject.GetComponent<EnemyLifeComponentDron>() || hit.collider.gameObject.GetComponent<EnemyLifeTorreta>())
+        if (hit.collider.gameObject.GetComponent<EnemyController>())
         {
             //que el script esté activo
             if(this.gameObject.GetComponent<PlayerLifeComponent>().enabled)

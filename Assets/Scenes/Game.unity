@@ -64226,6 +64226,11 @@ PrefabInstance:
       propertyPath: _deadLineHeight
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 7189473122018223546, guid: 6eccdfae647642343ac92dc69e7896e5,
+        type: 3}
+      propertyPath: _hitDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7375690855159619440, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.y
