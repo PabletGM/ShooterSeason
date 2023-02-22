@@ -46,7 +46,7 @@ public class EventoZonaPuebloHelado : MonoBehaviour
         //reinicia lista de enemigos
         GameManager.GetInstance().ResetEnemies();
         //activar numero enemigos
-        GameManager.GetInstance().SetEnemiesLeft(true);
+        
     }
 
     //comprueba que quedan enemigos en la zona
