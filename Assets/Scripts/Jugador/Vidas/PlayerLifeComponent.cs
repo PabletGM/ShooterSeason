@@ -49,7 +49,8 @@ public class PlayerLifeComponent : MonoBehaviour
             //que el script esté activo
             if(this.gameObject.GetComponent<PlayerLifeComponent>().enabled)
             {
-                
+                //al enemigo que se ha chocado lo desplazas
+                hit.collider.GetComponent<EnemyController>().Boost(3);
                 //le haces el daño correspondiente
                 Damage();
                 //activamos invulnerabilidad desactivando este script

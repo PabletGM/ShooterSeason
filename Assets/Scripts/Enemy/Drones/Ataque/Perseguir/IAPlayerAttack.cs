@@ -8,6 +8,7 @@ public class IAPlayerAttack : MonoBehaviour
     //seguirá al jugador que es el navMeshAgent.destination con los parametros del navMeshAgent siempre y cuando el jugador esté en la zona marcada
     public NavMeshAgent navMeshAgent;
     private float _myMinimumDistance = 10f;
+    private float _distanciaKnockBack = 0.1f;
     public GameObject goalDestination;
     NavMeshHit hit;
     private Rigidbody _myRigidbody;
@@ -19,6 +20,7 @@ public class IAPlayerAttack : MonoBehaviour
         //comprobacion para ver si el enemigo agent está justo encima del navmesh y ajustarlo sino
         if(NavMesh.SamplePosition(navMeshAgent.transform.position, out hit, 1.0f, NavMesh.AllAreas))
         {
+           
             //navMeshAgent.Warp(hit.position);
             //navMeshAgent.destination = goalDestination.transform.position;
         }
@@ -37,7 +39,14 @@ public class IAPlayerAttack : MonoBehaviour
                 navMeshAgent.destination = goalDestination.transform.position;
             }
         }
-         
+
+        if (Vector3.Distance(transform.position, goalDestination.transform.position) < _distanciaKnockBack)
+        {
+            //si el player y el enemigo estan a una distancia muy cercana(suponemos que ya han impactado y echamos al enemigo para atras)
+            this.gameObject.GetComponent<EnemyController>().Boost(3);
+        }
+           
+
         //añadimos modo estático mientras no ataque al jugador para que solo cuando detecte al jugador por distancia pueda acercarse y no caerse por la cuesta
     }
 }
