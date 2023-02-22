@@ -17,6 +17,9 @@ public class EnemyAttackController : MonoBehaviour
 
     [SerializeField]
     private float _myContadorDisparo = 1.5f;
+
+    [SerializeField]
+    private int numBalas=2;
     #endregion
     #region references
     /// <summary>
@@ -54,30 +57,29 @@ public class EnemyAttackController : MonoBehaviour
     /// </summary>
     /// <param name="originPoint">Shoot origin point</param>
     /// <param name="targetPoint">Shoot target point</param>
-    public void ShootEnemy()
-    {
-        
-        //el Raycast se compone de un origen , una direccion , un hit , una distancia y un layermask
-        RaycastHit hit;
+    //public void ShootEnemy()
+    //{
 
-        //si detecta algo
-        if (Physics.Raycast(_shotOriginTransform.position, _shotOriginTransform.forward, out hit, 100))
-        {
-            //de a lo que dé de decimos su nombre
-            Debug.Log(hit.transform.name);
-        }
-       
+    //    //el Raycast se compone de un origen , una direccion , un hit , una distancia y un layermask
+    //    RaycastHit hit;
 
-        //creamos la bala y la instanciamos en una posicion
-        Rigidbody balaInstancia = Instantiate(bala, apuntador.position,Quaternion.identity);
-        //le añadimos una fuerza a la bala instanciada en una direccion
-        balaInstancia.AddForce(apuntador.forward * _velocidadDisparo, ForceMode.Impulse);
-    }
+    //    //si detecta algo
+    //    if (Physics.Raycast(_shotOriginTransform.position, _shotOriginTransform.forward, out hit, 100))
+    //    {
+    //        //de a lo que dé de decimos su nombre
+    //        Debug.Log(hit.transform.name);
+    //    }
+
+    //    //creamos la bala y la instanciamos en una posicion
+    //    Rigidbody balaInstancia = Instantiate(bala, apuntador.position, Quaternion.identity);
+    //    //le añadimos una fuerza a la bala instanciada en una direccion
+    //    balaInstancia.AddForce(apuntador.forward * _velocidadDisparo, ForceMode.Impulse);
+
+    //}
     #endregion
 
     void Start()
     {
-
         enemyLifeComponentDron = this.gameObject.GetComponent<EnemyLifeComponentDron>();
         //decimos cual es el origen del tiro , que será la posicion deL apuntador del enemigo en este caso.
         _shotOriginTransform = _shotOriginObject.transform;
@@ -90,20 +92,54 @@ public class EnemyAttackController : MonoBehaviour
     void Update()
      {
         //comprobacion para que exista antes el EnemyLifeComponent
+        //mientras no haya pasado el tiempo de espera de disparo
+        if (_myContadorDisparo <= 0)
+        {
 
-            //mientras no haya pasado el tiempo de espera de disparo
-            if (_myContadorDisparo <= 0)
+            //comprobamos en cada frame la vida del enemigo si es máxima o no 
+            if (enemyLifeComponentDron._currentLife != enemyLifeComponentDron._maxLife)
             {
-
-                //comprobamos en cada frame la vida del enemigo si es máxima o no 
-                if (enemyLifeComponentDron._currentLife != enemyLifeComponentDron._maxLife)
-                {
-                    //si es menor , significa que le han atacado
-                    ShootEnemy();
-                }
-                //se reinicia el contador
-                _myContadorDisparo = 3;
+                //si es menor , significa que le han atacado
+                //ShootEnemy();
+                Shoot();
             }
-            _myContadorDisparo -= Time.deltaTime;
+            //se reinicia el contador
+            _myContadorDisparo = 3;
+        }
+        _myContadorDisparo -= Time.deltaTime;
+    }
+
+    public void Shoot()
+    {
+        //queremos crear mas de una bala, en el momento en que se instancia 1 bala se hace su movimiento automatico
+        //se empieza corrutina de disparo
+        StartCoroutine("Disparos");
+    }
+    IEnumerator Disparos()
+    {
+        int i = 0;
+        while (i < numBalas)
+        {
+            yield return new WaitForSeconds(0.5f);
+           
+            //el Raycast se compone de un origen , una direccion , un hit , una distancia y un layermask
+            RaycastHit hit;
+
+            //si detecta algo
+            if (Physics.Raycast(_shotOriginTransform.position, _shotOriginTransform.forward, out hit, 100))
+            {
+                //de a lo que dé de decimos su nombre
+                Debug.Log(hit.transform.name);
+            }
+
+            //creamos la bala y la instanciamos en una posicion
+            Rigidbody balaInstancia = Instantiate(bala, apuntador.position, Quaternion.identity);
+            //le añadimos una fuerza a la bala instanciada en una direccion
+            balaInstancia.AddForce(apuntador.forward * _velocidadDisparo, ForceMode.Impulse);
+
+            //aumento
+            i++;
+        }
+
     }
 }
