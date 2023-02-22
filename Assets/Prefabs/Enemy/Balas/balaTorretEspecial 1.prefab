@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244124f3c08fc1c428e4ba4d0c9b1f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1500
+  _speed: 3000
   bala: {fileID: 7655086544047008806}
 --- !u!54 &7655086544047008806
 Rigidbody:
