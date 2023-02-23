@@ -64885,11 +64885,21 @@ PrefabInstance:
       propertyPath: _cameraTransform
       value: 
       objectReference: {fileID: 5692643169000046876}
+    - target: {fileID: 8641210052685290443, guid: 933f61767983617479710f68011191b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8641210052685290445, guid: 933f61767983617479710f68011191b5,
         type: 3}
       propertyPath: ThePlayer
       value: 
       objectReference: {fileID: 976806411635989548}
+    - target: {fileID: 8641210053058298461, guid: 933f61767983617479710f68011191b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8641210053149656018, guid: 933f61767983617479710f68011191b5,
         type: 3}
       propertyPath: m_Name
