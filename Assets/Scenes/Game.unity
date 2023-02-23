@@ -7270,6 +7270,11 @@ PrefabInstance:
       propertyPath: _myApuntador
       value: 
       objectReference: {fileID: 1862877031}
+    - target: {fileID: 8853316139476353067, guid: 596e331ae7d7c4c47b00a1c1d9eda949,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 8853316139547561821, guid: 596e331ae7d7c4c47b00a1c1d9eda949,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35780,6 +35785,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 901794362}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 444961120}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1873248695}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   zonaPuebloHieloDesbloqueada: {fileID: 1536136728}
 --- !u!1001 &1520230418
 PrefabInstance:
@@ -38120,6 +38158,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.229025, y: 0.11020501, z: 0.04124297}
   m_Center: {x: 0.80204993, y: 0.0041910373, z: -1.1118274}
+--- !u!1 &1631857231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3454641262476940856, guid: ba72424cdcc987441836cf5e3f24c6fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2535579629114286777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1631857235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631857231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10225004, y: 0.029512439, z: 0.10290001}
+  m_Center: {x: 0.00000047683716, y: 0.014756128, z: -2.7390415e-14}
 --- !u!1001 &1633677804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48950,6 +49007,11 @@ PrefabInstance:
       propertyPath: _myPlayer
       value: 
       objectReference: {fileID: 240425587779201841}
+    - target: {fileID: 8853316139476353067, guid: 596e331ae7d7c4c47b00a1c1d9eda949,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 8853316139547561821, guid: 596e331ae7d7c4c47b00a1c1d9eda949,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52164,6 +52226,39 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1422742830}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 901794362}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 444961120}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1873248695}
           m_MethodName: SetActive
           m_Mode: 6
           m_Arguments:
@@ -63436,8 +63531,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.038185243, y: 0.068601, z: 0.036862504}
-  m_Center: {x: 0.03145145, y: 0.034299668, z: -0.031937186}
+  m_Size: {x: 0.033959728, y: 0.068601, z: 0.03344514}
+  m_Center: {x: 0.03356424, y: 0.03429946, z: -0.033645816}
 --- !u!65 &3764915420483504840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63449,8 +63544,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.03907135, y: 0.068601, z: 0.038586207}
-  m_Center: {x: -0.031008272, y: 0.034299765, z: -0.031075535}
+  m_Size: {x: 0.030171128, y: 0.068601, z: 0.033673838}
+  m_Center: {x: -0.035458308, y: 0.034299534, z: -0.033531748}
 --- !u!65 &3764915420483504841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63462,8 +63557,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.03801971, y: 0.068601, z: 0.037949502}
-  m_Center: {x: -0.031534437, y: 0.03429904, z: 0.0313937}
+  m_Size: {x: 0.032090914, y: 0.068601, z: 0.0343489}
+  m_Center: {x: -0.034498867, y: 0.03429886, z: 0.03319394}
 --- !u!65 &3764915420483504842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63475,8 +63570,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.040831693, y: 0.068601, z: 0.042251643}
-  m_Center: {x: 0.03238648, y: 0.03429657, z: 0.032876585}
+  m_Size: {x: 0.035475176, y: 0.068601, z: 0.036783516}
+  m_Center: {x: 0.035064653, y: 0.034296323, z: 0.035610702}
 --- !u!1001 &3969499324266083790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64051,17 +64146,17 @@ PrefabInstance:
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 378.01
+      value: 352.69
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.84
+      value: 20.92
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 377.11
+      value: 268.03
       objectReference: {fileID: 0}
     - target: {fileID: 5500721440195029546, guid: 6eccdfae647642343ac92dc69e7896e5,
         type: 3}
