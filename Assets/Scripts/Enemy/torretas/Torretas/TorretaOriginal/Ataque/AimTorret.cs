@@ -8,7 +8,7 @@ public class AimTorret : MonoBehaviour
     private float _myContadorDisparo;
     
     [SerializeField]
-    private float _velocidadDisparo=5f;
+    private float _velocidadDisparo=12f;
 
     [SerializeField]
     private protected Rigidbody _bullet;
