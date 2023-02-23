@@ -394,6 +394,8 @@ public class GameManager : MonoBehaviour
     {
         //avisamos que te has pasado el nivel
         LogicaObjetivosTemplo.GetInstance().SetStateTemploCompleted(true);
+        //quitamos mirilla
+        _myUIManager.Mirilla(false);
         //activamos panel de te has pasado el nivel
         _myUIManager.SetNextLevel(true);
     }

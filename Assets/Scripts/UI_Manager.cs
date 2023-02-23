@@ -246,6 +246,8 @@ public class UI_Manager : MonoBehaviour
     {
         //quitamos cursor
         _myGameManager._myCursor = false;
+        //ponemos mirilla
+        Mirilla(true);
         ////quitamos el panel 
         _NextLevelObject.SetActive(false);
 
