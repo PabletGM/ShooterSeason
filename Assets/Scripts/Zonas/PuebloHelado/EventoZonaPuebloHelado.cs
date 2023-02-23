@@ -60,6 +60,8 @@ public class EventoZonaPuebloHelado : MonoBehaviour
             limitesPuebloHielo.SetActive(false);
             //establecemos nueva mision
             LogicaObjetivosTemplo.GetInstance().SetNewMission("Vuelve a la pradera y entra al portal");
+            //activas un collider invisible en la puerta que active un evento que active las partes de los portales que se necesitan
+
         }
     }
     //trigger de zona
