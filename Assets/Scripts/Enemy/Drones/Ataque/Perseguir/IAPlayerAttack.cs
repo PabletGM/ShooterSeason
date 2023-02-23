@@ -40,13 +40,24 @@ public class IAPlayerAttack : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(transform.position, goalDestination.transform.position) < _distanciaKnockBack)
-        {
-            //si el player y el enemigo estan a una distancia muy cercana(suponemos que ya han impactado y echamos al enemigo para atras)
-            this.gameObject.GetComponent<EnemyController>().Boost(3);
-        }
+        
            
 
         //añadimos modo estático mientras no ataque al jugador para que solo cuando detecte al jugador por distancia pueda acercarse y no caerse por la cuesta
+    }
+
+    //si player choca contra este
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (Vector3.Distance(transform.position, goalDestination.transform.position) < _distanciaKnockBack)
+            {
+                //si el player y el enemigo estan a una distancia muy cercana(suponemos que ya han impactado y echamos al enemigo para atras)
+                this.gameObject.GetComponent<EnemyController>().Boost(3);
+                //hacemos daño al player
+                other.gameObject.GetComponent<PlayerLifeComponent>().Damage();
+            }
+        }
     }
 }
