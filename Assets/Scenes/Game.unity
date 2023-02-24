@@ -25778,18 +25778,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1364930473625761174}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1240293479 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1364930474815575537, guid: 9ce3e47667696554cb94b6f2808926d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1364930473625761174}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240293477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1246892592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27151,8 +27139,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1240293479}
-          m_MethodName: SetMirarJugador
+        - m_Target: {fileID: 0}
+          m_MethodName: 
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27162,8 +27150,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1379228687}
-          m_MethodName: SetMirarJugador
+        - m_Target: {fileID: 0}
+          m_MethodName: 
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27173,8 +27161,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1671911341374435540}
-          m_MethodName: SetMirarJugador
+        - m_Target: {fileID: 0}
+          m_MethodName: 
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27184,8 +27172,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 3790956250387284919}
-          m_MethodName: SetMirarJugador
+        - m_Target: {fileID: 0}
+          m_MethodName: 
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27195,8 +27183,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1469418617}
-          m_MethodName: SetMirarJugador
+        - m_Target: {fileID: 0}
+          m_MethodName: 
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27206,8 +27194,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1617557714}
-          m_MethodName: SetMirarJugador
+        - m_Target: {fileID: 0}
+          m_MethodName: 
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27217,8 +27205,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1619225116}
-          m_MethodName: SetMirarJugador
+        - m_Target: {fileID: 0}
+          m_MethodName: 
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27228,8 +27216,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1608148317}
-          m_MethodName: SetMirarJugador
+        - m_Target: {fileID: 0}
+          m_MethodName: 
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -33602,8 +33590,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1240293479}
-        m_MethodName: SetMirarJugador
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33613,8 +33601,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1379228687}
-        m_MethodName: SetMirarJugador
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33624,8 +33612,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1671911341374435540}
-        m_MethodName: SetMirarJugador
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33635,8 +33623,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3790956250387284919}
-        m_MethodName: SetMirarJugador
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33646,8 +33634,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1469418617}
-        m_MethodName: SetMirarJugador
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33657,8 +33645,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1617557714}
-        m_MethodName: SetMirarJugador
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33668,8 +33656,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1619225116}
-        m_MethodName: SetMirarJugador
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33679,8 +33667,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1608148317}
-        m_MethodName: SetMirarJugador
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -33690,6 +33678,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  candadoAbiertoIsla1: {fileID: 1240293477}
+  candadoCerradoIsla1: {fileID: 1379228685}
+  candadoAbiertoIsla11: {fileID: 4677469206160841881}
+  candadoCerradoIsla12: {fileID: 1701514023583487681}
+  candadoAbiertoIsla2: {fileID: 1469418613}
+  candadoCerradoIsla2: {fileID: 1617557710}
+  candadoAbiertoIsla21: {fileID: 1619225112}
+  candadoCerradoIsla22: {fileID: 1608148313}
 --- !u!1 &1345030991
 GameObject:
   m_ObjectHideFlags: 0
@@ -33997,18 +33993,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1364930473625761174}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1379228687 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1364930474398771609, guid: 9ce3e47667696554cb94b6f2808926d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1364930473625761174}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379228685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1387064718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f9e6d1264bdf20498380711c6da933c,
@@ -35844,18 +35828,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8641210053706003352}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1469418617 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8248528716348485993, guid: 933f61767983617479710f68011191b5,
-    type: 3}
-  m_PrefabInstance: {fileID: 8641210053706003352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469418613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1473454891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38894,18 +38866,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8641210053706003352}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1608148317 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3139107965511724475, guid: 933f61767983617479710f68011191b5,
-    type: 3}
-  m_PrefabInstance: {fileID: 8641210053706003352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608148313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1611399740
 GameObject:
   m_ObjectHideFlags: 0
@@ -39157,36 +39117,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8641210053706003352}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1617557714 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1849968413600959591, guid: 933f61767983617479710f68011191b5,
-    type: 3}
-  m_PrefabInstance: {fileID: 8641210053706003352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617557710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1619225112 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8641210053160688000, guid: 933f61767983617479710f68011191b5,
     type: 3}
   m_PrefabInstance: {fileID: 8641210053706003352}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1619225116 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2262296605916599257, guid: 933f61767983617479710f68011191b5,
-    type: 3}
-  m_PrefabInstance: {fileID: 8641210053706003352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619225112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1624058503 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f9e6d1264bdf20498380711c6da933c,
@@ -61569,18 +61505,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ce3e47667696554cb94b6f2808926d9, type: 3}
---- !u!114 &1671911341374435540 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 415148691419055426, guid: 9ce3e47667696554cb94b6f2808926d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1364930473625761174}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4677469206160841881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1701514023583487681 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 391189701464925015, guid: 9ce3e47667696554cb94b6f2808926d9,
@@ -63045,7 +62969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.7600098, y: 31.825012}
+  m_AnchoredPosition: {x: 2.7600098, y: 31.825027}
   m_SizeDelta: {x: 66.70015, y: 60.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2910609890551223352
@@ -64951,18 +64875,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.035475176, y: 0.068601, z: 0.036783516}
   m_Center: {x: 0.035064653, y: 0.034296323, z: 0.035610702}
---- !u!114 &3790956250387284919 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2768899682883089953, guid: 9ce3e47667696554cb94b6f2808926d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1364930473625761174}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701514023583487681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636a33458b41ca742b3bdba30122511e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3969499324266083790
 PrefabInstance:
   m_ObjectHideFlags: 0
