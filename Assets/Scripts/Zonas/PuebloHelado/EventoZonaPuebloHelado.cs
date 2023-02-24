@@ -35,6 +35,9 @@ public class EventoZonaPuebloHelado : MonoBehaviour
     [SerializeField]
     private protected GameObject limitesPuebloHielo;
 
+    [SerializeField]
+    private protected GameObject triggerCinematicaPortales;
+
     #endregion
 
     #region parameters
@@ -61,7 +64,7 @@ public class EventoZonaPuebloHelado : MonoBehaviour
             //establecemos nueva mision
             LogicaObjetivosTemplo.GetInstance().SetNewMission("Vuelve a la pradera y entra al portal");
             //activas un collider invisible en la puerta que active un evento que active las partes de los portales que se necesitan
-
+            triggerCinematicaPortales.SetActive(true);
         }
     }
     //trigger de zona

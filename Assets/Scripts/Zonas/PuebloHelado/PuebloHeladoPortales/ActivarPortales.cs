@@ -11,6 +11,7 @@ public class ActivarPortales : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         //hacer evento que haga inicio de portales
         //si se choca el player invocamos evento
         //este evento en cada portal---> quita efecto de particulas y desactiva TeletransporteCollide
