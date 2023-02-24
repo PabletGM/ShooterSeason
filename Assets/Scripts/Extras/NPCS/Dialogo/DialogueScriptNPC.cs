@@ -101,7 +101,15 @@ public class DialogueScriptNPC : MonoBehaviour
                 GameManager.GetInstance().QuitarDialogosNPCPradera(false);
                 LogicaObjetivosTemplo.GetInstance().SetNewMission("Avanza hasta Pueblo Helado");
             }
-           
+
+            //NPC isla
+            else if (this.gameObject.name == "PanelDialogue3")
+            {
+                GameManager.GetInstance().QuitarDialogosNPCIsla(false);
+                LogicaObjetivosTemplo.GetInstance().SetNewMission("Sube la montaña");
+            }
+
+
             //desactivamos panel de texto
             //gameObject.SetActive(false);
         }

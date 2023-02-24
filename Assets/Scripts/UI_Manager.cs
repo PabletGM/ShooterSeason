@@ -75,6 +75,9 @@ public class UI_Manager : MonoBehaviour
     private protected GameObject _dialogosNPCPradera;
 
     [SerializeField]
+    private protected GameObject _dialogosNPCIsla;
+
+    [SerializeField]
     private protected GameObject _dialogos;
     /// <summary>
     /// Reference to object containing objects for Player's Victory
@@ -285,6 +288,15 @@ public class UI_Manager : MonoBehaviour
         //activamos dialogo del NPC en especifico
         _dialogosNPCPradera.SetActive(dialogo);
     }
+
+    public void SetDialogosNPCIsla(bool dialogo)
+    {
+        //activamos dialogos en general
+        _dialogos.SetActive(dialogo);
+        //activamos dialogo del NPC en especifico
+        _dialogosNPCIsla.SetActive(dialogo);
+    }
+
     //se inicia el play
     public void Play()
     {

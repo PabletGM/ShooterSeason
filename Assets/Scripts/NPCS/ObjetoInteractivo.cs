@@ -24,7 +24,12 @@ public class ObjetoInteractivo : MonoBehaviour
         {
             GameManager.GetInstance().DialogosNPCPradera(true);
         }
-       
+        //si es NPC islaHielo
+        else if (this.gameObject.name == "dronNPC3")
+        {
+            GameManager.GetInstance().DialogosNPCIsla(true);
+        }
+
         //orden de ejecutar dialogos
         Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
         //se encargará de empezar los dialogos
