@@ -65,6 +65,8 @@ public class EventoZonaPuebloHelado : MonoBehaviour
             LogicaObjetivosTemplo.GetInstance().SetNewMission("Vuelve a la pradera y entra al portal");
             //activas un collider invisible en la puerta que active un evento que active las partes de los portales que se necesitan
             triggerCinematicaPortales.SetActive(true);
+            //desactivamos este script
+            this.enabled = false;
         }
     }
     //trigger de zona
