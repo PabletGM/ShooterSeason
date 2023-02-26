@@ -9,6 +9,12 @@ public class ActivarPortales : MonoBehaviour
     [SerializeField]
     private protected UnityEvent eventoPortales;
 
+    [SerializeField]
+    private protected GameObject puebloHelado;
+
+    [SerializeField]
+    private protected GameObject triggerInvestigacionPortales;
+
     #region candados
     [SerializeField]
     private protected GameObject candadoAbiertoIsla1;
@@ -38,6 +44,13 @@ public class ActivarPortales : MonoBehaviour
         //este evento en cada portal---> quita efecto de particulas y desactiva TeletransporteCollide
         //desactiva icono cerrado candado y pone candado abierto
         eventoPortales.Invoke();
+
+        //desactiva PuebloHelado
+        puebloHelado.SetActive(false);
+        //activas otro gameobject
+        triggerInvestigacionPortales.SetActive(true);
+        //establecemos nueva mision
+        LogicaObjetivosTemplo.GetInstance().SetNewMission("Vuelve a la pradera y entra al portal");
     }
 
     ////al salir del collider
