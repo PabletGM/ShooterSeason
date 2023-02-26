@@ -6,9 +6,8 @@ public class MisionArribaMontaña : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        LogicaObjetivosTemplo.GetInstance().SetNewMission("VInvestiga la zona");
-        //activamos efecto de particulas de humo
-
+        LogicaObjetivosTemplo.GetInstance().SetNewMission("Investiga la zona");
         //desactivamos este gameObject
+        this.gameObject.SetActive(false);
     }
 }

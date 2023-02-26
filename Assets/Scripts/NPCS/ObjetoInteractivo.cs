@@ -18,20 +18,30 @@ public class ObjetoInteractivo : MonoBehaviour
         if(this.gameObject.name == "dronNPC")
         {
             GameManager.GetInstance().DialogosNPCFueraTemplo(true);
+            //orden de ejecutar dialogos
+            Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
         }
         //si es NPC pradera
         else if(this.gameObject.name == "dronNPC2")
         {
             GameManager.GetInstance().DialogosNPCPradera(true);
+            //orden de ejecutar dialogos
+            Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
         }
         //si es NPC islaHielo
         else if (this.gameObject.name == "dronNPC3")
         {
             GameManager.GetInstance().DialogosNPCIsla(true);
+            //orden de ejecutar dialogos
+            Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
+        }
+        //si se interactua con dronMuerto
+        else if(this.gameObject.name == "dronMuerto" || this.gameObject.name == "dronMuerto (1)")
+        {
+            //se suma a contador de interactuados en ZonaBaseMilitar
         }
 
-        //orden de ejecutar dialogos
-        Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
+        
         //se encargará de empezar los dialogos
         Debug.Log("objeto activado");
     }
