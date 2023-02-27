@@ -45,8 +45,7 @@ public class EnemyLifeComponentDron : MonoBehaviour
     [SerializeField]
     private protected Text _myText;
 
-    [SerializeField]
-    private protected ParticleSystem onda;
+
     [SerializeField]
     private protected ParticleSystem strike;
 
@@ -71,7 +70,6 @@ public class EnemyLifeComponentDron : MonoBehaviour
         //se le hace daño
         Damage();
         //efectos de particulas golpe
-        onda.Play();
         strike.Play();
         //si es enemigo nivel 1
         if(this.gameObject.GetComponent<EnemyController>())
