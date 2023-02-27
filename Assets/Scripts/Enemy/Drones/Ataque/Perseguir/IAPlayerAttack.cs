@@ -8,7 +8,7 @@ public class IAPlayerAttack : MonoBehaviour
     //seguirá al jugador que es el navMeshAgent.destination con los parametros del navMeshAgent siempre y cuando el jugador esté en la zona marcada
     public NavMeshAgent navMeshAgent;
     private float _myMinimumDistance = 10f;
-    private float _distanciaKnockBack = 0.1f;
+    private float _distanciaKnockBack = 1f;
     public GameObject goalDestination;
     NavMeshHit hit;
     private Rigidbody _myRigidbody;
