@@ -20,7 +20,10 @@ public class UI_Manager : MonoBehaviour
     /// Reference to object containing Text Component to display number of live enemies.
     /// </summary>
     [SerializeField]
-    private protected GameObject _enemiesLeftObject;
+    private protected GameObject _enemiesLeftObjectNumber;
+
+    [SerializeField]
+    private protected GameObject _interactiveObjects;
 
     [SerializeField]
     private protected GameObject _playerAmetralladora;
@@ -29,6 +32,8 @@ public class UI_Manager : MonoBehaviour
     /// Text Component to display number of live enemies.
     /// </summary>
     private Text _enemiesLeftText;
+
+    private Text _interactiveObjectsText;
     /// <summary>
     /// Reference to object containing Text Component to display remaining match time.
     /// </summary>
@@ -112,6 +117,9 @@ public class UI_Manager : MonoBehaviour
     /// </summary>
     [SerializeField]
     private protected GameObject _enemiesLeft;
+
+    [SerializeField]
+    private protected GameObject _interactiveObjectsLeftNumber;
     /// <summary>
     /// timeLeft
     /// </summary>
@@ -132,6 +140,11 @@ public class UI_Manager : MonoBehaviour
     public void UpdateEnemiesLeft(int newEnemiesLeft)
     {
         _enemiesLeftText.text = newEnemiesLeft.ToString();
+    }
+
+    public void UpdateInteractiveObjectsLeft(int newInteractiveObjectsLeft)
+    {
+        _interactiveObjectsText.text = newInteractiveObjectsLeft.ToString();
     }
     public void SetPause(bool pause)
     {
@@ -231,6 +244,11 @@ public class UI_Manager : MonoBehaviour
     public void SetEnemiesLeft(bool enabled)
     {
         _enemiesLeft.SetActive(enabled);
+    }
+
+    public void SetInteractiveObjects(bool enabled)
+    {
+        _interactiveObjects.SetActive(enabled);
     }
 
     public void SetTimer(bool enabled)
@@ -384,8 +402,9 @@ public class UI_Manager : MonoBehaviour
         //asociamos el componente texto creado en el script a el componente del GO _playerLifeObject
         _playerLifeText = _playerLifeObject.GetComponent<Text>();
         _timeDisplayText = _timeDisplayObject.GetComponent<Text>();
-        _enemiesLeftText = _enemiesLeftObject.GetComponent<Text>();
-        
+        _enemiesLeftText = _enemiesLeftObjectNumber.GetComponent<Text>();
+        _interactiveObjectsText = _interactiveObjectsLeftNumber.GetComponent<Text>();
+
         //TODO
     }
     private void Start()

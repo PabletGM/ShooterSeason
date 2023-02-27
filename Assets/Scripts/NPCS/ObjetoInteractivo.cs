@@ -39,6 +39,7 @@ public class ObjetoInteractivo : MonoBehaviour
         else if(this.gameObject.name == "dronMuerto" || this.gameObject.name == "dronMuerto (1)")
         {
             //se suma a contador de interactuados en ZonaBaseMilitar
+            GameManager.GetInstance().QuitarObjectInteractive();
         }
 
         

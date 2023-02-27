@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     [SerializeField]
     private float _matchDuration = 60.0f;
-    
+
+    private int _numberObjectsInteractivesSeen = 0;
+
     //para que si es GameOver no puedas hacer pause
     [HideInInspector]
      public bool _endgame = false;
@@ -387,7 +389,39 @@ public class GameManager : MonoBehaviour
         _myUIManager.UpdateEnemiesLeft(_listOfEnemies.Count);
     }
 
-   
+    public void SetObjetosInteractivosLeft(bool enemiesLeftcanvas)
+    {
+        //activamos en canvas enemiesLeft
+        _myUIManager.SetInteractiveObjects(enemiesLeftcanvas);
+        //los actualizamos en pantalla
+        _myUIManager.UpdateInteractiveObjectsLeft(_numberObjectsInteractivesSeen);
+    }
+
+    //añadir 1 objectInteractive
+    public void AddObjectInteractive()
+    {
+        _numberObjectsInteractivesSeen += 1;
+        Debug.Log(_numberObjectsInteractivesSeen);
+        //_myUIManager.UpdateInteractiveObjectsLeft(_numberObjectsInteractivesSeen);
+    }
+
+    public int GetObjectInteractive()
+    {
+        return _numberObjectsInteractivesSeen;
+    }
+
+
+
+
+    //quitar 1 objectInteractive
+    public void QuitarObjectInteractive()
+    {
+        _numberObjectsInteractivesSeen -= 1;
+        Debug.Log(_numberObjectsInteractivesSeen);
+        _myUIManager.UpdateInteractiveObjectsLeft(_numberObjectsInteractivesSeen);
+    }
+
+
 
     //siguiente Nivel
     public void SetNextLevel2()

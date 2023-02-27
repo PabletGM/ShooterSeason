@@ -13,20 +13,36 @@ public class ZonaBaseMilitar : MonoBehaviour
     [SerializeField]
     private protected GameObject chispas;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collision)
     {
-        LogicaObjetivosTemplo.GetInstance().SetNewMission("Investiga la base militar");
+        if (collision.gameObject.GetComponent<PlayerLifeComponent>())
+        {
+            LogicaObjetivosTemplo.GetInstance().SetNewMission("Investiga la base militar");
+            //activamos canvas Objetos Interactuables
+            GameManager.GetInstance().SetObjetosInteractivosLeft(true);
+        }
+       
+        
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider collision)
     {
-        //activamos humo y efectos de particulas
-        humos.SetActive(true);
-        chispas.SetActive(true);
-        LogicaObjetivosTemplo.GetInstance().SetNewMission("Interactua con todos los elementos");
+        if (collision.gameObject.GetComponent<PlayerLifeComponent>())
+        {
+            //activamos humo y efectos de particulas
+            humos.SetActive(true);
+            chispas.SetActive(true);
+            LogicaObjetivosTemplo.GetInstance().SetNewMission("Interactua con todos los elementos");
+        }
+        
     }
 
     public void SetExplosion(bool set)
     {
         Explosion.SetActive(set);
+    }
+
+    private void Update()
+    {
+       
     }
 }
