@@ -537,7 +537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 2653108150126367931}
-  goalDestination: {fileID: 0}
+  goalDestination: {fileID: 7327744032395905939, guid: e3bef3dc6246175468e84409597c5f50,
+    type: 3}
 --- !u!135 &2653108150126367933
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -567,6 +568,8 @@ MonoBehaviour:
   _hitDamage: 25
   healthEnemyDronBar: {fileID: 2653108149458571830}
   _myText: {fileID: 2653108150855982131}
+  strike: {fileID: 0}
+  vfx: {fileID: 0}
   _currentLife: 0
 --- !u!114 &2653108150126367935
 MonoBehaviour:

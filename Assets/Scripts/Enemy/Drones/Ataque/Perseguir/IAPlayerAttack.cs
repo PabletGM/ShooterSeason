@@ -7,9 +7,10 @@ public class IAPlayerAttack : MonoBehaviour
 {
     //seguirá al jugador que es el navMeshAgent.destination con los parametros del navMeshAgent siempre y cuando el jugador esté en la zona marcada
     public NavMeshAgent navMeshAgent;
-    private float _myMinimumDistance = 10f;
+    private float _myMinimumDistance = 20f;
     private float _distanciaKnockBack = 1f;
     public GameObject goalDestination;
+    public GameObject FPSPlayer;
     NavMeshHit hit;
     private Rigidbody _myRigidbody;
     void Start()
@@ -22,7 +23,7 @@ public class IAPlayerAttack : MonoBehaviour
         {
            
             //navMeshAgent.Warp(hit.position);
-            //navMeshAgent.destination = goalDestination.transform.position;
+            navMeshAgent.destination = goalDestination.transform.position;
         }
         
     }
@@ -33,10 +34,12 @@ public class IAPlayerAttack : MonoBehaviour
         if (NavMesh.SamplePosition(navMeshAgent.transform.position, out hit, 1.0f, NavMesh.AllAreas))
         {
             //para ver si detecta al enemigo
+            //si la distancia entre la ametralladora y el enemigo es < x
             if (Vector3.Distance(transform.position, goalDestination.transform.position) < _myMinimumDistance)
             {
                 Debug.Log("localizado");
-                navMeshAgent.destination = goalDestination.transform.position;
+                //se pone el transform del enemigo como posicion del FPSPlayer 
+                navMeshAgent.destination = FPSPlayer.transform.position;
             }
         }
 

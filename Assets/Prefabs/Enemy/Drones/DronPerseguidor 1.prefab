@@ -106,6 +106,8 @@ MonoBehaviour:
   navMeshAgent: {fileID: 1808212482959641348}
   goalDestination: {fileID: 5121123583290264019, guid: 312ebe18cfde2414ab00bf5113d78bc2,
     type: 3}
+  FPSPlayer: {fileID: 3690203237873692456, guid: 6eccdfae647642343ac92dc69e7896e5,
+    type: 3}
 --- !u!135 &7703658168242278146
 SphereCollider:
   m_ObjectHideFlags: 0

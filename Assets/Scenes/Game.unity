@@ -2492,7 +2492,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   navMeshAgent: {fileID: 76384041}
-  goalDestination: {fileID: 976806411635989548}
+  goalDestination: {fileID: 7327744032395905939, guid: e3bef3dc6246175468e84409597c5f50,
+    type: 3}
+  FPSPlayer: {fileID: 0}
 --- !u!195 &76384041
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4660,7 +4662,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalDestination
       value: 
-      objectReference: {fileID: 976806411635989548}
+      objectReference: {fileID: 3795537635523342439}
     - target: {fileID: 5690155057525443691, guid: 8f6d7289ec9912b43bfe1cdfc96a8b7f,
         type: 3}
       propertyPath: eventosZoneTemplo
@@ -5325,8 +5327,12 @@ PrefabInstance:
         type: 3}
       propertyPath: goalDestination
       value: 
-      objectReference: {fileID: 7327744032395905939, guid: e3bef3dc6246175468e84409597c5f50,
+      objectReference: {fileID: 3795537635523342439}
+    - target: {fileID: 1808212482959641349, guid: 511d8744dea6a3a439814e30c96c7773,
         type: 3}
+      propertyPath: FPSPlayer
+      value: 
+      objectReference: {fileID: 976806411635989548}
     - target: {fileID: 5690155057525443691, guid: 511d8744dea6a3a439814e30c96c7773,
         type: 3}
       propertyPath: eventosZoneTemplo
@@ -25430,7 +25436,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goalDestination
       value: 
-      objectReference: {fileID: 976806411635989548}
+      objectReference: {fileID: 3795537635523342439}
     - target: {fileID: 5690155057525443691, guid: 8f6d7289ec9912b43bfe1cdfc96a8b7f,
         type: 3}
       propertyPath: eventosZoneTemplo
@@ -35913,7 +35919,7 @@ PrefabInstance:
     - target: {fileID: 1808212482959641348, guid: 511d8744dea6a3a439814e30c96c7773,
         type: 3}
       propertyPath: m_WalkableMask
-      value: 1
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1808212482959641348, guid: 511d8744dea6a3a439814e30c96c7773,
         type: 3}
@@ -35926,6 +35932,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7327744032395905939, guid: e3bef3dc6246175468e84409597c5f50,
         type: 3}
+    - target: {fileID: 1808212482959641349, guid: 511d8744dea6a3a439814e30c96c7773,
+        type: 3}
+      propertyPath: FPSPlayer
+      value: 
+      objectReference: {fileID: 976806411635989548}
     - target: {fileID: 5690155057525443691, guid: 511d8744dea6a3a439814e30c96c7773,
         type: 3}
       propertyPath: eventosZoneTemplo
@@ -64526,7 +64537,8 @@ PrefabInstance:
         type: 3}
       propertyPath: goalDestination
       value: 
-      objectReference: {fileID: 976806411635989548}
+      objectReference: {fileID: 7327744032395905939, guid: e3bef3dc6246175468e84409597c5f50,
+        type: 3}
     - target: {fileID: 2653108150126367934, guid: 669609f001da22d42a7fa7b227a83d1d,
         type: 3}
       propertyPath: _myApuntador
@@ -67168,6 +67180,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.035475176, y: 0.068601, z: 0.036783516}
   m_Center: {x: 0.035064653, y: 0.034296323, z: 0.035610702}
+--- !u!1 &3795537635523342439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7327744032395905939, guid: e3bef3dc6246175468e84409597c5f50,
+    type: 3}
+  m_PrefabInstance: {fileID: 5844850986091084788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3856663339594424950
 PrefabInstance:
   m_ObjectHideFlags: 0
