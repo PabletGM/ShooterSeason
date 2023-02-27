@@ -8,9 +8,6 @@ public class ZonaBaseMilitar : MonoBehaviour
     private protected GameObject humos;
 
     [SerializeField]
-    private protected GameObject Explosion;
-
-    [SerializeField]
     private protected GameObject chispas;
 
     private void OnTriggerEnter(Collider collision)
@@ -36,10 +33,7 @@ public class ZonaBaseMilitar : MonoBehaviour
         
     }
 
-    public void SetExplosion(bool set)
-    {
-        Explosion.SetActive(set);
-    }
+   
 
     private void Update()
     {

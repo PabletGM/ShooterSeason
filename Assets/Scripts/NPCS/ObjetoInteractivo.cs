@@ -36,10 +36,12 @@ public class ObjetoInteractivo : MonoBehaviour
             Dialogo.GetComponent<DialogueScriptNPC>().StartDialogue();
         }
         //si se interactua con dronMuerto
-        else if(this.gameObject.name == "dronMuerto" || this.gameObject.name == "dronMuerto (1)")
+        else if((this.gameObject.name == "dronMuerto" || this.gameObject.name == "dronMuerto (1)"))
         {
             //se suma a contador de interactuados en ZonaBaseMilitar
             GameManager.GetInstance().QuitarObjectInteractive();
+            //desactivar este script para que no pueda interactuar 2 veces
+            this.gameObject.SetActive(false);
         }
 
         
