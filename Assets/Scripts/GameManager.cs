@@ -391,7 +391,9 @@ public class GameManager : MonoBehaviour
 
     public void SetObjetosInteractivosLeft(bool enemiesLeftcanvas)
     {
-        //activamos en canvas enemiesLeft
+        //desactivamos enemigos por si acaso 
+        _myUIManager.SetEnemiesLeft(false);
+        //activamos en canvas interactive objects
         _myUIManager.SetInteractiveObjects(enemiesLeftcanvas);
         //los actualizamos en pantalla
         _myUIManager.UpdateInteractiveObjectsLeft(_numberObjectsInteractivesSeen);

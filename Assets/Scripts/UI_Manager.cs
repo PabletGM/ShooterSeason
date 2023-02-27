@@ -248,6 +248,7 @@ public class UI_Manager : MonoBehaviour
 
     public void SetInteractiveObjects(bool enabled)
     {
+        _interactiveObjectsLeftNumber.SetActive(enabled);
         _interactiveObjects.SetActive(enabled);
     }
 
