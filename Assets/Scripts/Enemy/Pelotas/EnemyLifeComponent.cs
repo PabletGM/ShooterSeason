@@ -45,6 +45,12 @@ public class EnemyLifeComponent : MonoBehaviour
     private protected Text _myText;
 
     private AumentoTamaño _myAumentotamaño;
+
+    [SerializeField]
+    private protected ParticleSystem onda;
+    [SerializeField]
+    private protected ParticleSystem strike;
+
     #endregion
 
     #region properties
@@ -63,6 +69,9 @@ public class EnemyLifeComponent : MonoBehaviour
 
     public void EfectoPelota()
     {
+        //efectos particulas
+        onda.Play();
+        strike.Play();
         //se le hace daño
         Damage();
         //se le aplica un impulso
@@ -79,7 +88,7 @@ public class EnemyLifeComponent : MonoBehaviour
     
     public void Damage()
     {
-        
+       
         //si tiene vida se le quita 1 vida
         Debug.Log("Has infligido daño al enemigo");
         //le quitamos 1 vida
