@@ -44,6 +44,15 @@ public class EnemyLifeComponentDron : MonoBehaviour
 
     [SerializeField]
     private protected Text _myText;
+
+    [SerializeField]
+    private protected ParticleSystem onda;
+    [SerializeField]
+    private protected ParticleSystem strike;
+
+    [SerializeField]
+    private protected GameObject vfx;
+
     #endregion
     #region properties
     /// <summary>
@@ -61,7 +70,9 @@ public class EnemyLifeComponentDron : MonoBehaviour
     {
         //se le hace daño
         Damage();
-
+        //efectos de particulas golpe
+        onda.Play();
+        strike.Play();
         //si es enemigo nivel 1
         if(this.gameObject.GetComponent<EnemyController>())
         {
@@ -95,6 +106,8 @@ public class EnemyLifeComponentDron : MonoBehaviour
             //si es de el nivel 1
             if(this.gameObject.GetComponent<EnemyController>())
             {
+                //destruimos efectos de particulas
+                vfx.SetActive(false);
                 Die1();
             }
             
