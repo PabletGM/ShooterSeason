@@ -29,6 +29,14 @@ public class ZonaBaseMilitar : MonoBehaviour
             humos.SetActive(true);
             chispas.SetActive(true);
             LogicaObjetivosTemplo.GetInstance().SetNewMission("Interactua con todos los elementos");
+
+            //comprobamos cantidad de objetos interactivos
+            if (GameManager.GetInstance().GetObjectInteractive() <= 0)
+            {
+                //quitamos de la pantalla el objetos interactivos
+                GameManager.GetInstance().SetObjetosInteractivosLeft(false);
+                //iniciariamos cinematica
+            }
         }
         
     }
