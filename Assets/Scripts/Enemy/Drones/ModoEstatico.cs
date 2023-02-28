@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ModoEstatico : MonoBehaviour
 {
     //modo que emplean los drones comunes del mapa para quedarse quietos hasta que se acerca el jugador un mínimo de distancia
-    private float _myMinimumDistance = 50f;
+    private float _myMinimumDistance = 5f;
 
+    public NavMeshAgent navMeshAgent;
     public GameObject goalDestination;
 
     private Rigidbody _myRigidbody;
@@ -25,12 +27,17 @@ public class ModoEstatico : MonoBehaviour
         //comprueba si está en el area indicada el jugador
         if (Vector3.Distance(transform.position, goalDestination.transform.position) < _myMinimumDistance)
         {
-            //si lo está ponemos la gravedad enemiga para que pueda atacar
-            _myRigidbody.useGravity = true;
+            Debug.Log("Hey");
+            //se distancia minima la pasa ataca
+          navMeshAgent.destination = goalDestination.transform.position;
+            //quita bloqueo para que pueda moverse
+            _myRigidbody.constraints = RigidbodyConstraints.None;
+
         }
         else
         {
-            _myRigidbody.useGravity = false;
+            //bloquear o freeze positions
+            _myRigidbody.constraints = RigidbodyConstraints.FreezePosition;
         }
     }
 }
