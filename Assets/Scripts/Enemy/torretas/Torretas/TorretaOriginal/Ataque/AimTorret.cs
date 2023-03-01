@@ -11,7 +11,7 @@ public class AimTorret : MonoBehaviour
     private float numBalas = 5;
 
     [SerializeField]
-    private float _velocidadDisparo=15f;
+    private float _velocidadDisparo=4f;
 
     [SerializeField]
     private protected Rigidbody _bullet;

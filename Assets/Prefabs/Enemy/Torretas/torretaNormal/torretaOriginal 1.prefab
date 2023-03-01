@@ -597,7 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _myContadorDisparo: 1.5
   numBalas: 5
-  _velocidadDisparo: 15
+  _velocidadDisparo: 4
   _bullet: {fileID: -2731710941464654786, guid: be7e2b202301e9446b73a01e47fb19ce,
     type: 3}
   apuntadorTorreta: {fileID: 8853316138906081553}
