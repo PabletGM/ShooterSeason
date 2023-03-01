@@ -100,7 +100,7 @@ public class EnemyController : MonoBehaviour
         //se busca GameObject con componente y se asocia
         eventosDesfiladero = GameObject.Find("DesfiladeroDrones").GetComponent<EventosDesfiladeroDrones>();
         //se busca GameObject con componente y se asocia
-        eventosPuebloHelado = GameObject.Find("PuebloHelado").GetComponent<EventoZonaPuebloHelado>();
+        eventosPuebloHelado = GameObject.Find("PueblitoHelado").GetComponent<EventoZonaPuebloHelado>();
         //_myGameManager.RegisterEnemyLevel1(this);
         _myRigidBody = GetComponent<Rigidbody>();
     }
