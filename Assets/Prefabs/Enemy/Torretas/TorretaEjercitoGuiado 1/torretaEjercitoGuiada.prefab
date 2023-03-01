@@ -548,6 +548,10 @@ MonoBehaviour:
   _deadLineHeight: -10
   healthTorretBar: {fileID: 0}
   _myText: {fileID: 0}
+  VFX: {fileID: 0}
+  _explosion1: {fileID: 0}
+  _explosion2: {fileID: 0}
+  _explosion3: {fileID: 0}
 --- !u!114 &2554024334965362773
 MonoBehaviour:
   m_ObjectHideFlags: 0

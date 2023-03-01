@@ -619,6 +619,10 @@ MonoBehaviour:
   _deadLineHeight: -10
   healthTorretBar: {fileID: 8853316138733460816}
   _myText: {fileID: 8853316139424306362}
+  VFX: {fileID: 0}
+  _explosion1: {fileID: 0}
+  _explosion2: {fileID: 0}
+  _explosion3: {fileID: 0}
 --- !u!54 &8853316139476353067
 Rigidbody:
   m_ObjectHideFlags: 0

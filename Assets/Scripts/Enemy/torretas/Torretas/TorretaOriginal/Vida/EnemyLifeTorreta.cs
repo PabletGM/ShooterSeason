@@ -40,8 +40,24 @@ public class EnemyLifeTorreta : MonoBehaviour
 
     private UI_Manager _myUIManager;
 
+
     [SerializeField]
     private protected Text _myText;
+
+
+    //los 3 partycle system de la explosion
+
+    [SerializeField]
+    private GameObject VFX;
+    
+    [SerializeField]
+    private ParticleSystem  _explosion1;
+
+    [SerializeField]
+    private ParticleSystem _explosion2;
+
+    [SerializeField]
+    private ParticleSystem _explosion3;
     #endregion
     #region properties
     /// <summary>
@@ -82,7 +98,15 @@ public class EnemyLifeTorreta : MonoBehaviour
         //si no le quedan vidas
         if (_currentLife <= 0)
         {
+            //particle system explotar
+            VFX.SetActive(true);
+            _explosion1.Play();
+            _explosion2.Play();
+            _explosion3.Play();
             Die();
+            //VFX.SetActive(false);
+
+
 
         }
     }
