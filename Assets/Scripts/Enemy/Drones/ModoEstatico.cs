@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class ModoEstatico : MonoBehaviour
 {
     //modo que emplean los drones comunes del mapa para quedarse quietos hasta que se acerca el jugador un mínimo de distancia
-    private float _myMinimumDistance = 5f;
+    private float _myMinimumDistance = 20f;
 
     public NavMeshAgent navMeshAgent;
     public GameObject goalDestination;
