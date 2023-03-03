@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroEscribir : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class IntroEscribir : MonoBehaviour
             {
                 StopAllCoroutines();
                 dialogueText.text = lines[index];
+               
             }
         }
     }
@@ -91,6 +93,9 @@ public class IntroEscribir : MonoBehaviour
             dialogueText.text = string.Empty;
             //desactivamos panel de texto
             //gameObject.SetActive(false);
+            //llamamos a escena juego
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Game");
         }
     }
 

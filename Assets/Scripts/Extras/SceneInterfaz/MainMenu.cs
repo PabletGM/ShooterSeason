@@ -15,14 +15,14 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private protected GameObject _MainMenuPanel;
 
-    private SoundManager soundManager;
+    private  protected SoundManager soundManager;
     #endregion 
     //carga la escena principal
     public void MainMenuPlay()
     {
         //se pasa a la siguiente escena por orden
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Introduccion");
         //activa sonido
         //soundManager.SeleccionAudio(0, 1f);
     }
