@@ -279,8 +279,9 @@ public class UI_Manager : MonoBehaviour
     /// </summary>
     public void Continue()
     {
-       
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Game");
         this.enabled = true;
         //ponemos el tiempo a 1
         Time.timeScale = 1;
