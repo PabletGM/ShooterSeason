@@ -574,6 +574,8 @@ MonoBehaviour:
   audios:
   - {fileID: 8300000, guid: eb1436f54276f5c45844151d5a51207e, type: 3}
   - {fileID: 8300000, guid: 1e0b6b34147c09548819cc8ed3ddec5a, type: 3}
+  - {fileID: 8300000, guid: 57b61508eb60bf444a60a2dcfa5ac94c, type: 3}
+  - {fileID: 8300000, guid: 7c1385abdbc34424f942f74c1f3dceac, type: 3}
 --- !u!4 &763520496
 Transform:
   m_ObjectHideFlags: 0
@@ -733,7 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 469227164}
   lines:
-  - Vamos en el avion de a bordo C-115 escapando del laboratorio  1a de Inteligencia
+  - Vamos en el helicoptero de a bordo C-115 escapando del laboratorio  1a de Inteligencia
     artificial, la situacion es desesperada, el ultimo punto de la tierra estable
     esta fuera de control...
   - Solicitamos auxilio, alguien nos escucha??...

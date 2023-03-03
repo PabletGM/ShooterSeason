@@ -37,6 +37,8 @@ public class IntroEscribir : MonoBehaviour
     {
         sonidosCanvas = GameObject.Find("Canvas");
         dialogueText.text = string.Empty;
+        //ejecutamos sonido de helicoptero en bucle
+        sonidosCanvas.GetComponent<SonidosIntro>().HelicopterNoise();
     }
 
     // Update is called once per frame
@@ -57,6 +59,7 @@ public class IntroEscribir : MonoBehaviour
             {
                 StopAllCoroutines();
                 dialogueText.text = lines[index];
+                
                
             }
         }
@@ -99,10 +102,17 @@ public class IntroEscribir : MonoBehaviour
             dialogueText.text = string.Empty;
             //desactivamos panel de texto
             //gameObject.SetActive(false);
+            Explosion();
             //llamamos a escena juego
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene("Game");
         }
+    }
+
+    private void Explosion()
+    {
+        //sonido explosion
+        sonidosCanvas.GetComponent<SonidosIntro>().ExplosionNoise();
     }
 
 

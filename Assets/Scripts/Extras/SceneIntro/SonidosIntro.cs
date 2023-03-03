@@ -21,8 +21,18 @@ public class SonidosIntro : MonoBehaviour
         soundManager.SeleccionAudio(1, 1f);
     }
 
-   
+    public void HelicopterNoise()
+    {
+        soundManager.SeleccionAudio(3, 1f);
+    }
 
-  
+    public void ExplosionNoise()
+    {
+        soundManager.SeleccionAudio(2, 1f);
+    }
+
+
+
+
 
 }
