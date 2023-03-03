@@ -5,8 +5,8 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     //control de audio
-    private AudioSource pasosNieve;
-    private AudioSource pasosBaldosa;
+    //private AudioSource pasosNieve;
+    //private AudioSource pasosBaldosa;
     private AudioSource controlAudio;
 
     //array que contenga todos los audioclips del juego
@@ -15,14 +15,14 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         controlAudio = GetComponent<AudioSource>();
-        pasosBaldosa  = GetComponent<AudioSource>();
-        pasosNieve = GetComponent<AudioSource>();
+        //pasosBaldosa  = GetComponent<AudioSource>();
+        //pasosNieve = GetComponent<AudioSource>();
     }
 
     public void SeleccionAudio(int indice , float volumen)
     {
         //pone un audioClip con volumen determinado
-        controlAudio.PlayOneShot(audios[indice], volumen);
+        //controlAudio.PlayOneShot(audios[indice], volumen);
         
     }
     
