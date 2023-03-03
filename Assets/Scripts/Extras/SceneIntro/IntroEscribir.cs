@@ -24,6 +24,9 @@ public class IntroEscribir : MonoBehaviour
     [SerializeField]
     private float textSpeed = 0.02f;
 
+    [SerializeField]
+    private protected GameObject sonidosCanvas;
+
     //para saber en que linea estamos
     private int index;
 
@@ -32,6 +35,7 @@ public class IntroEscribir : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sonidosCanvas = GameObject.Find("Canvas");
         dialogueText.text = string.Empty;
     }
 
@@ -45,6 +49,8 @@ public class IntroEscribir : MonoBehaviour
             if (dialogueText.text == lines[index])
             {
                 NextLine();
+                //hacemos sonido boton
+                sonidosCanvas.GetComponent<SonidosIntro>().clickNoise();
             }
             //o se termina texto 
             else

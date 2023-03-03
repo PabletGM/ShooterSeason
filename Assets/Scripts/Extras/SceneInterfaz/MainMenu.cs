@@ -24,13 +24,13 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         SceneManager.LoadScene("Introduccion");
         //activa sonido
-        //soundManager.SeleccionAudio(0, 1f);
+        soundManager.SeleccionAudio(0, 1f);
     }
 
     void Awake()
     {
         //sonido, busca objeto de tipo sonido
-        //soundManager = FindObjectOfType<SoundManager>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     //carga los controles
