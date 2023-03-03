@@ -48,16 +48,16 @@ public class EnemyLifeTorreta : MonoBehaviour
     //los 3 partycle system de la explosion
 
     [SerializeField]
-    private GameObject VFX;
+    private  protected GameObject VFX;
     
     [SerializeField]
-    private ParticleSystem  _explosion1;
+    private protected ParticleSystem  _explosion1;
 
     [SerializeField]
-    private ParticleSystem _explosion2;
+    private protected ParticleSystem _explosion2;
 
     [SerializeField]
-    private ParticleSystem _explosion3;
+    private protected ParticleSystem _explosion3;
     #endregion
     #region properties
     /// <summary>
