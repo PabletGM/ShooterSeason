@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ZonaBaseMilitar : MonoBehaviour
 {
@@ -41,6 +42,9 @@ public class ZonaBaseMilitar : MonoBehaviour
                 LogicaObjetivosTemplo.GetInstance().SetNewMission("Investiga la nave enterrada en la nieve");
                 //activamos efecto de particulas
                 interactuar.SetActive(true);
+                //cambiamos escena
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene("EndHielo");
                 //iniciariamos cinematica
             }
         }
