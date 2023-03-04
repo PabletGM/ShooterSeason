@@ -10,6 +10,9 @@ public class ZonaBaseMilitar : MonoBehaviour
     [SerializeField]
     private protected GameObject chispas;
 
+    [SerializeField]
+    private protected GameObject interactuar;
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.GetComponent<PlayerLifeComponent>())
@@ -35,6 +38,9 @@ public class ZonaBaseMilitar : MonoBehaviour
             {
                 //quitamos de la pantalla el objetos interactivos
                 GameManager.GetInstance().SetObjetosInteractivosLeft(false);
+                LogicaObjetivosTemplo.GetInstance().SetNewMission("Investiga la nave enterrada en la nieve");
+                //activamos efecto de particulas
+                interactuar.SetActive(true);
                 //iniciariamos cinematica
             }
         }
