@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 1581731924}
   - component: {fileID: 1581731923}
   - component: {fileID: 1581731922}
-  - component: {fileID: 1581731921}
+  - component: {fileID: 1581731925}
   m_Layer: 5
   m_Name: Paneltext
   m_TagString: Untagged
@@ -846,29 +846,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2.9, y: -48.8}
   m_SizeDelta: {x: 736.56067, y: 254.63857}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1581731921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581731919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e38cfc558e347a746a1b2643949ecd11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 1659689951}
-  lines:
-  - Acabo de llegar a una base militar abandonada...
-  - No se cuanto me queda de vida...por ahora sobrevivo...
-  - "\xBFQui\xE9n sabe..., tiene sentido dejar esto por escrito? \xBFAcaso quedan
-    algun ser humano en la tierra?"
-  - "Es extra\xF1o , aqu\xED habia robots muertos , alguien lleg\xF3 antes que yo...o
-    hay algo peor que los robots..."
-  - "Sinceramente...solo quiero vengar a mis compa\xF1eros"
-  textSpeed: 0.02
-  sonidosCanvas: {fileID: 20676961}
 --- !u!114 &1581731922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,6 +937,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581731919}
   m_CullTransparentMesh: 0
+--- !u!114 &1581731925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581731919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e499e8ede0b529439994b8cec0fbed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1659689951}
+  lines:
+  - Acabo de llegar a una base militar abandonada...
+  - No se cuanto me queda de vida...por ahora sobrevivo...
+  - "\xBFQui\xE9n sabe..., tiene sentido dejar esto por escrito? \xBFAcaso quedan
+    algun ser humano en la tierra?"
+  - "Es extra\xF1o , aqu\xED habia robots muertos , alguien lleg\xF3 antes que yo...o
+    hay algo peor que los robots..."
+  - "Sinceramente...solo quiero vengar a mis compa\xF1eros"
+  textSpeed: 0.02
+  sonidosCanvas: {fileID: 20676961}
 --- !u!1 &1659689949
 GameObject:
   m_ObjectHideFlags: 0
