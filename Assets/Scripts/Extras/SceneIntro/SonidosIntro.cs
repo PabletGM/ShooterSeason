@@ -13,6 +13,8 @@ public class SonidosIntro : MonoBehaviour
     {
         //sonido, busca objeto de tipo sonido
         soundManager = FindObjectOfType<SoundManager>();
+        //activamos modo Menus
+        ModoMenus();
     }
 
     //hace ruido de click
@@ -29,6 +31,11 @@ public class SonidosIntro : MonoBehaviour
     public void ExplosionNoise()
     {
         soundManager.SeleccionAudio(2, 1f);
+    }
+
+    public void ModoMenus()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 
 

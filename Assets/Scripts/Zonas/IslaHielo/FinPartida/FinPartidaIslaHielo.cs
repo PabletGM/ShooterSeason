@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinPartidaIslaHielo : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class FinPartidaIslaHielo : MonoBehaviour
     {
         if(other.gameObject.tag =="Player")
         {
-            //cambiamos de escena
-            Debug.Log("ADIOS");
+            //cambiamos escena
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("EndHielo");
         }
     }
 }

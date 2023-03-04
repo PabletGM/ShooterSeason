@@ -104,7 +104,7 @@ public class IntroEscribir : MonoBehaviour
             //gameObject.SetActive(false);
             Explosion();
             //llamamos a escena juego
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene("Game");
         }
     }

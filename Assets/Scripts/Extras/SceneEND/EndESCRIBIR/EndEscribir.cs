@@ -100,7 +100,6 @@ public class EndEscribir : MonoBehaviour
             //gameObject.SetActive(false);
            
             //llamamos a escena juego
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene("StartMenu");
         }
     }
