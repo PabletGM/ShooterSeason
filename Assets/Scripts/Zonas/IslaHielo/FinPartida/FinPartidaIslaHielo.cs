@@ -9,6 +9,7 @@ public class FinPartidaIslaHielo : MonoBehaviour
         if(other.gameObject.tag =="Player")
         {
             //cambiamos de escena
+            Debug.Log("ADIOS");
         }
     }
 }
