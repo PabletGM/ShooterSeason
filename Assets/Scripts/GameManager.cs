@@ -100,6 +100,12 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void SetTipsButtonGM(bool enabled)
+    {
+        //invocamos metodo de tips en 1 segundo
+        _myUIManager.SetTipsButton(enabled);
+
+    }
     //para pasar de nivel normal a nivel cronometrado
     public void SetNivelCronometrado(bool cronometro)
     {

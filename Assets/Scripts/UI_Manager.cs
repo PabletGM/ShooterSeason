@@ -71,6 +71,9 @@ public class UI_Manager : MonoBehaviour
     private protected GameObject _consejosGameObject;
 
     [SerializeField]
+    private protected GameObject _TipsGO;
+
+    [SerializeField]
     private protected GameObject _buttonQuit;
 
     [SerializeField]
@@ -198,6 +201,15 @@ public class UI_Manager : MonoBehaviour
     {
         _consejosGameObject.SetActive(enabled);
     }
+
+    public void SetTipsButton(bool enabled)
+    {
+        //invocamos metodo de tips en 1 segundo
+        _TipsGO.SetActive(enabled);
+
+    }
+
+   
     /// <summary>
     /// Allows to activate and deactivate Player's victory menu.
     /// </summary>
@@ -368,8 +380,11 @@ public class UI_Manager : MonoBehaviour
         //timeLeft
         //_timeLeft.SetActive(enabled);
 
-        //consejos
+        //consejos o misiones
         SetConsejosButton(true);
+
+        //ponemos tips
+        SetTipsButton(true);
     }
 
     //quitamos misiones al pulsar a Quit
