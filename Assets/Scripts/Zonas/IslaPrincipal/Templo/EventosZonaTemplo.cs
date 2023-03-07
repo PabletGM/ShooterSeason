@@ -69,6 +69,8 @@ public class EventosZonaTemplo : MonoBehaviour
 
             //activando nivel 1
             Invoke("AñadirLimitesLevel1", 2.0f);
+            //quitamos los tips 
+            EscribirtTips.GetInstance().SetTip(false);
             //si detecta a jugador damos nueva señal para cambio de mision
            LogicaObjetivosTemplo.GetInstance().SetNewMission("Mata a todos los enemigos del Templo");
             
