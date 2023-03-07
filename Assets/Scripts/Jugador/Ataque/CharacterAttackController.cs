@@ -68,7 +68,8 @@ public class CharacterAttackController : MonoBehaviour
         //creamos la bala y la instanciamos en una posicion
         Rigidbody balaInstancia = Instantiate(bala, apuntador.position, Quaternion.identity);
         //le añadimos una fuerza a la bala instanciada en una direccion
-        balaInstancia.AddForce(apuntador.forward * _velocidadDisparo, ForceMode.Impulse);
+        //balaInstancia.AddForce(apuntador.forward * _velocidadDisparo, ForceMode.Impulse);
+        balaInstancia.AddForce(apuntador.forward * _velocidadDisparo);
 
         //el Raycast se compone de un origen , una direccion , un hit , una distancia y un layermask
         RaycastHit hit;
