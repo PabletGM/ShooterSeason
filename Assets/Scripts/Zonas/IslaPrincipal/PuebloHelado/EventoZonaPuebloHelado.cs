@@ -64,6 +64,12 @@ public class EventoZonaPuebloHelado : MonoBehaviour
             //activas un collider invisible en la puerta que active un evento que active las partes de los portales que se necesitan
             triggerCinematicaPortales.SetActive(true);
             LogicaObjetivosTemplo.GetInstance().SetNewMission("Vuelve a la puerta del pueblo");
+
+            //desactivamos tips
+            EscribirtTips.GetInstance().SetTip(false);
+            //ponemos uno nuevo
+            EscribirtTips.GetInstance().SetNewTip("");
+
             //desactivamos este script
             this.enabled = false;
         }
@@ -89,6 +95,12 @@ public class EventoZonaPuebloHelado : MonoBehaviour
             Debug.Log("Entró jugador");
             //activando nivel Desfiladero
             Invoke("AñadirLimitesPuebloHielo", 1.0f);
+
+            //activamos tips
+            EscribirtTips.GetInstance().SetTip(true);
+            //ponemos uno nuevo
+            EscribirtTips.GetInstance().SetNewTip("Las torretas estan constantemente apuntandote, una buena estrategia es no quedarse quieto...");
+
             //si detecta a jugador damos nueva señal para cambio de mision
             LogicaObjetivosTemplo.GetInstance().SetNewMission("Acaba con los enemigos del Pueblo Hielo");
             //activa enemigos
@@ -96,6 +108,11 @@ public class EventoZonaPuebloHelado : MonoBehaviour
         }
 
         //el booleano será true sino quedan enemigos
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+       
     }
 
 }
