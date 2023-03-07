@@ -83,10 +83,24 @@ public class EventosDesfiladeroDrones : MonoBehaviour
             Invoke("AñadirLimitesAntesDesfiladero", 1.0f);
             //si detecta a jugador damos nueva señal para cambio de mision
             LogicaObjetivosTemplo.GetInstance().SetNewMission("Acaba con los enemigos del Desfiladero");
+
+            //activamos tips
+            EscribirtTips.GetInstance().SetTip(true);
+            //ponemos uno nuevo
+            EscribirtTips.GetInstance().SetNewTip("Te conviene disparar a cajas y barriles...nunca sabes que puede pasar");
+
             //activa enemigos
             GameManager.GetInstance().SetEnemiesLeft(true);
         }
 
         //el booleano será true sino quedan enemigos
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        //activamos tips
+        EscribirtTips.GetInstance().SetTip(false);
+        //ponemos uno nuevo vacio
+        EscribirtTips.GetInstance().SetNewTip("");
     }
 }
