@@ -44,6 +44,9 @@ public class CharacterAttackController : MonoBehaviour
     private protected Transform apuntador;
 
     [SerializeField]
+    private protected Transform ametralladora;
+
+    [SerializeField]
     public Rigidbody bala;
     #endregion
     #region properties
@@ -65,8 +68,8 @@ public class CharacterAttackController : MonoBehaviour
         //ejecutamos particulas
         disparoArmaFlash.Play();
         disparo_bala.Play();
-        //creamos la bala y la instanciamos en una posicion
-        Rigidbody balaInstancia = Instantiate(bala, apuntador.position, Quaternion.identity);
+        //creamos la bala y la instanciamos en una posicion y rotacion de la ametralladora
+        Rigidbody balaInstancia = Instantiate(bala, apuntador.position, ametralladora.rotation);
         //le añadimos una fuerza a la bala instanciada en una direccion
         //balaInstancia.AddForce(apuntador.forward * _velocidadDisparo, ForceMode.Impulse);
         balaInstancia.AddForce(apuntador.forward * _velocidadDisparo);
