@@ -11,6 +11,8 @@ public class InteractiveSelected : MonoBehaviour
 
     public GameObject InteractiveText;
 
+    private bool ImpedimentoInteractuar = false;
+
     void Start()
     {
         //damos valor inicial al layer
@@ -33,10 +35,12 @@ public class InteractiveSelected : MonoBehaviour
             //segunda comprobacion, segun el tag
             if (hit.collider.tag == "Objeto Interactivo")
             {
-                //comprobamos si se ha pulsado E para interactuar
-                if (Input.GetKeyDown(KeyCode.E))
+                //comprobamos si se ha pulsado E para interactuar y si no hay impedimento
+                if (Input.GetKeyDown(KeyCode.E) && !GetImpedimentoInteractuar())
                 {
                     hit.collider.transform.GetComponent<ObjetoInteractivo>().ActivarObjeto();
+                    //impedimos interactuar más
+                    SetImpedimentoInteractuar(true);
                 }
             }
             //dibujar el rayo
@@ -46,8 +50,21 @@ public class InteractiveSelected : MonoBehaviour
         {
             //no se puede interactuar con el
             InteractiveText.SetActive(false);
+            //quitamos el impedimento para poder interactuar mas
+            SetImpedimentoInteractuar(false);
         }
     }
+
+    //metodo que impide que se pueda interactuar mas de 1 vez seguida
+    public void SetImpedimentoInteractuar(bool set)
+    {
+        ImpedimentoInteractuar = set;
+    }
+    public bool GetImpedimentoInteractuar()
+    {
+        return ImpedimentoInteractuar;
+    }
 }
+
 
 

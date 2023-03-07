@@ -45,8 +45,7 @@ public class ObjetoInteractivo : MonoBehaviour
         }
 
         
-        //se encargará de empezar los dialogos
-        Debug.Log("objeto activado");
+
     }
 
     private void Start()
