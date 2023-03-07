@@ -88,18 +88,18 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -2178903908849206923}
-    m_Position: {x: 1940, y: 1350, z: 0}
+    m_Position: {x: 1560, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7190675627352466785}
-    m_Position: {x: 1970, y: 1460, z: 0}
+    m_Position: {x: 1590, y: 430, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 1700, y: 1390, z: 0}
-  m_EntryPosition: {x: 1700, y: 1490, z: 0}
-  m_ExitPosition: {x: 1900, y: 1580, z: 0}
+  m_AnyStatePosition: {x: 1320, y: 360, z: 0}
+  m_EntryPosition: {x: 1320, y: 460, z: 0}
+  m_ExitPosition: {x: 1520, y: 550, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -2178903908849206923}
 --- !u!1102 &-2178903908849206923
@@ -143,7 +143,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
