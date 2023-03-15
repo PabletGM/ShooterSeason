@@ -332,6 +332,7 @@ public class GameManager : MonoBehaviour
         //paralizamos juego
         Time.timeScale = 0;
         //al perder inicializamos metodo SetGameOver
+        _myUIManager.SetEnemiesLeft(false);
         _myUIManager.SetGameOver(true);
         _myUIManager.SetContinueButton(true);
         
