@@ -47,7 +47,6 @@ public class EventosZonaTemplo : MonoBehaviour
         //se pasa de nivel
         if(GameManager.GetInstance().NumeroEnemigosZona()<=0)
         {
-            
             GameManager.GetInstance().NivelTemploContrarrelojAcabado();
             //se destruye este script y el gameObject
             Destroy(this.gameObject);
@@ -66,15 +65,22 @@ public class EventosZonaTemplo : MonoBehaviour
         //si entra jugador avisa y activa paredes invisibles de la zona 1 , no se podrá salir ya de esta, asi evitamos que algun enemigo salga y vuelva a entrar detectandolo 2 veces el collider y jodiendo el registro de enemigos
         if (collision.gameObject.GetComponent<PlayerLifeComponent>())
         {
-
-            //activando nivel 1
-            Invoke("AñadirLimitesLevel1", 2.0f);
             //quitamos los tips 
             EscribirtTips.GetInstance().SetTip(false);
             //si detecta a jugador damos nueva señal para cambio de mision
            LogicaObjetivosTemplo.GetInstance().SetNewMission("Mata a todos los enemigos del Templo, ojo al tiempo");
-            
+        }
+    }
 
+    private void OnTriggerStay(Collider collision)
+    {
+       
+        //mientras se quede el jugador dentro
+        if (collision.gameObject.GetComponent<PlayerLifeComponent>())
+        {
+            Debug.Log("Limites");
+            //activando nivel 1
+            Invoke("AñadirLimitesLevel1", 5.0f);
         }
     }
 }
