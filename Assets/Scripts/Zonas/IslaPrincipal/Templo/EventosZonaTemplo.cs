@@ -78,9 +78,8 @@ public class EventosZonaTemplo : MonoBehaviour
         //mientras se quede el jugador dentro
         if (collision.gameObject.GetComponent<PlayerLifeComponent>())
         {
-            Debug.Log("Limites");
             //activando nivel 1
-            Invoke("AñadirLimitesLevel1", 5.0f);
+            Invoke("AñadirLimitesLevel1", 2.0f);
         }
     }
 }
