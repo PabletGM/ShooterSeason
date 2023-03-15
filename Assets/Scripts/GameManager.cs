@@ -179,7 +179,7 @@ public class GameManager : MonoBehaviour
     public void OnEnemyDies(EnemyController deadEnemy)
     {
         //TODO
-        //quitar un enemigo a la lista
+        //quitar un enemigo a la lista, empieza en 0
         _listOfEnemies.Remove(deadEnemy);
         //actualizas el numero de enemigos restantes
         _myUIManager.UpdateEnemiesLeft(_listOfEnemies.Count);
@@ -323,8 +323,8 @@ public class GameManager : MonoBehaviour
         //activamos cursor
         _myCursor = true;
         //EndGame(true);
-        //desactivamos todos los enemigos
-       for(int i=0; i <_listOfEnemies.Count; i++)
+        //desactivamos todos los enemigos, van de 0 a .count-1
+       for(int i= _listOfEnemies.Count-1; i > 0; i--)
        {
             //vamos haciendo remove de cada elemento de la lista i
             OnEnemyDies(_listOfEnemies[i]);
@@ -339,8 +339,8 @@ public class GameManager : MonoBehaviour
 
     public void ResetEnemies()
     {
-        //desactivamos todos los enemigos
-        for (int i = 0; i < _listOfEnemies.Count; i++)
+        //desactivamos todos los enemigos, van de 0 a .count-1
+        for (int i = _listOfEnemies.Count - 1; i > 0; i--)
         {
             //vamos haciendo remove de cada elemento de la lista i
             OnEnemyDies(_listOfEnemies[i]);
@@ -558,7 +558,12 @@ public class GameManager : MonoBehaviour
        //comprobamos estado de partida,si es false , GameOver
         if(!EstadoPartida()||_timeLeft<=0)
         {
-            OnPlayerDefeat();
+            if(_myplayerAlive)
+            {
+                OnPlayerDefeat();
+                _myplayerAlive = false;
+            }
+           
         }
         
         
