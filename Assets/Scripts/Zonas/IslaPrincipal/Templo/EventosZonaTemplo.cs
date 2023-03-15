@@ -72,7 +72,7 @@ public class EventosZonaTemplo : MonoBehaviour
             //quitamos los tips 
             EscribirtTips.GetInstance().SetTip(false);
             //si detecta a jugador damos nueva señal para cambio de mision
-           LogicaObjetivosTemplo.GetInstance().SetNewMission("Mata a todos los enemigos del Templo");
+           LogicaObjetivosTemplo.GetInstance().SetNewMission("Mata a todos los enemigos del Templo, ojo al tiempo");
             
 
         }
