@@ -469,6 +469,8 @@ public class GameManager : MonoBehaviour
         _myCursor = true;
         //activarDialogos
         _myUIManager.SetDialogosNPCFueraTemplo(dialogos);
+        //cuando se pone dialogo desactivar misiones
+        _myUIManager.SetConsejosButton(false);
     }
 
     public void DialogosNPCPradera(bool dialogos)
@@ -482,6 +484,8 @@ public class GameManager : MonoBehaviour
         _myCursor = true;
         //activarDialogos
         _myUIManager.SetDialogosNPCPradera(dialogos);
+        //cuando se pone dialogo desactivar misiones
+        _myUIManager.SetConsejosButton(false);
     }
 
     public void DialogosNPCIsla(bool dialogos)
@@ -495,6 +499,8 @@ public class GameManager : MonoBehaviour
         _myCursor = true;
         //activarDialogos
         _myUIManager.SetDialogosNPCIsla(dialogos);
+        //cuando se pone dialogo desactivar misiones
+        _myUIManager.SetConsejosButton(false);
     }
 
     public void QuitarDialogosNPCFueraTemplo(bool dialogos)
@@ -508,6 +514,8 @@ public class GameManager : MonoBehaviour
         _myCursor = false;
         //activarDialogos
         _myUIManager.SetDialogosNPCFueraTemplo(dialogos);
+        //cuando se quita dialogo volvemos a activar misiones
+        _myUIManager.SetConsejosButton(true) ;
 
 
         //una vez que se ha interactuado con dron ponemos nueva mision
@@ -525,6 +533,8 @@ public class GameManager : MonoBehaviour
         _myCursor = false;
         //activarDialogos
         _myUIManager.SetDialogosNPCPradera(dialogos);
+        //cuando se quita dialogo volvemos a activar misiones
+        _myUIManager.SetConsejosButton(true);
 
 
         //una vez que se ha interactuado con dron ponemos nueva mision
@@ -542,6 +552,8 @@ public class GameManager : MonoBehaviour
         _myCursor = false;
         //activarDialogos
         _myUIManager.SetDialogosNPCIsla(dialogos);
+        //cuando se quita dialogo volvemos a activar misiones
+        _myUIManager.SetConsejosButton(true);
 
 
         //una vez que se ha interactuado con dron ponemos nueva mision
