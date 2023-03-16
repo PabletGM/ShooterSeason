@@ -7,7 +7,7 @@ public class InteractiveSelected : MonoBehaviour
     //para comprobar si nuestro raycast interactua con objetos que posean este layer
     LayerMask mask;
     //distancia  a la que detectará el objeto
-    public float distancia = 1.5f;
+    public float distancia;
 
     public GameObject InteractiveText;
 
