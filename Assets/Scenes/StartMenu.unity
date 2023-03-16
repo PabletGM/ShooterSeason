@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1076,7 +1076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &887836551
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Left click      <---->     shoot / talk
+  m_text: Left click      <---->     shoot / dialogs
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d8a20b09d3b722846aab54e76bdee001, type: 2}
   m_sharedMaterial: {fileID: 5730469865991713417, guid: d8a20b09d3b722846aab54e76bdee001,
