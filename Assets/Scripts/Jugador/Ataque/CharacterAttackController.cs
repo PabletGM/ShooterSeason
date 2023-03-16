@@ -80,6 +80,7 @@ public class CharacterAttackController : MonoBehaviour
         //si detecta algo
         if (Physics.Raycast(_shotOriginTransform.position , _shotOriginTransform.forward , out hit , 1000))
         {
+            
             //de a lo que dé de decimos su nombre
             //Debug.Log(hit.transform.name);
             //produce daño si es un enemigo bola

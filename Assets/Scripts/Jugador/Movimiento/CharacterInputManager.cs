@@ -171,6 +171,12 @@ public class CharacterInputManager : MonoBehaviour
             _myCharacterMovementManager.SetMovementDirection(_horizontalInput, _verticalInput);
             _myCharacterMovementManager.SetMovementRotation(_mouseInput);
         }
+        //sino hay movimiento
+        else
+        {
+            _myCharacterMovementManager.SetMovementDirection(0,0);
+            _myCharacterMovementManager.SetMovementRotation(0);
+        }
 
 
         //sonidos pasos
