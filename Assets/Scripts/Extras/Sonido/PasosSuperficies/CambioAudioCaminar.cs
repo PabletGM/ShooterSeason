@@ -8,8 +8,11 @@ public class CambioAudioCaminar : MonoBehaviour
 
     //aqui pones el sonido que quieras segun el material
     [SerializeField]
-    private protected AudioClip AudioClipPasos;
+    private protected AudioClip AudioClipPasosNieve;
 
+    //aqui pones el sonido que quieras segun el material
+    [SerializeField]
+    private protected AudioClip AudioClipPasosBaldosas;
 
     //para acceder al player
     [SerializeField]
@@ -20,8 +23,18 @@ public class CambioAudioCaminar : MonoBehaviour
     {
         if(collision.gameObject.tag=="Player")
         {
-            //accedemos al audiosource del player , al clip y lo cambiamos
-            player.GetComponent<AudioSource>().clip = AudioClipPasos;
+            //accedemos al audiosource del player , al clip y lo cambiamos a la nieve que es la que tiene colliders
+            player.GetComponent<AudioSource>().clip = AudioClipPasosNieve;
+        }
+    }
+
+    //si dejamos de tocar los colliders es que estamos tocando baldosas
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {   
+            //accedemos al audiosource del player , al clip y lo cambiamos a la nieve que es la que tiene colliders
+            player.GetComponent<AudioSource>().clip = AudioClipPasosBaldosas;
         }
     }
 }

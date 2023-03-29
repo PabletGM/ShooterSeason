@@ -163,6 +163,7 @@ public class CharacterInputManager : MonoBehaviour
             _myCharacterMovementManager.SetWalkVelocity();
         }
 
+
         //direccion y rotacion si hay movimiento
         if(_horizontalInput!=0 || _verticalInput!=0)
         {
@@ -181,8 +182,10 @@ public class CharacterInputManager : MonoBehaviour
 
         //sonidos pasos
 
+
+        #region sonidoPasosHorizontalVertical
         //si jugador pulsa A, D
-        if(Input.GetButtonDown("Horizontal"))
+        if (Input.GetButtonDown("Horizontal"))
         {
             if (!pasosVerticalActivo)
             {
@@ -199,6 +202,7 @@ public class CharacterInputManager : MonoBehaviour
             }
             
         }
+
         //si jugador pulsa W,S
         if (Input.GetButtonDown("Vertical"))
         {
@@ -247,18 +251,7 @@ public class CharacterInputManager : MonoBehaviour
             
         }
 
-       
-
-
-
-        //if (_myCharacterController.isGrounded && Input.GetButtonDown("Vertical") || _myCharacterController.isGrounded && Input.GetButtonDown("Horizontal"))
-        //{ 
-
-        //}
-        //else
-        //{
-        //    _myCameraBobbing.isWalking = false;
-        //}
+        #endregion
 
 
     }
