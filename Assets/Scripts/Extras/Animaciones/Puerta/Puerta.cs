@@ -12,6 +12,8 @@ public class Puerta : MonoBehaviour
     {
         if(other.gameObject.tag=="Player")
         {
+            //reproduces el sonido de su audioSource
+            this.GetComponent<AudioSource>().Play(0);
             puerta.Play("Abrir");
         }
         
@@ -21,6 +23,8 @@ public class Puerta : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            //reproduces el sonido de su audioSource
+            this.GetComponent<AudioSource>().Play(0);
             puerta.Play("Cerrar");
         }
        
