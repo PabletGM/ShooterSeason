@@ -25,7 +25,6 @@ public class CambioAudioCaminar : MonoBehaviour
         
             //se asocia el audioclip 1 vez
             player.GetComponent<AudioSource>().clip = AudioClipPasosNieve;
-       
     }
 
     //si dejamos de tocar los colliders es que estamos tocando baldosas
@@ -34,6 +33,6 @@ public class CambioAudioCaminar : MonoBehaviour
        
             //accedemos al audiosource del player , al clip y lo cambiamos a la nieve que es la que tiene colliders
             player.GetComponent<AudioSource>().clip = AudioClipPasosBaldosas;
-        
+
     }
 }

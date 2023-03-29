@@ -92,6 +92,8 @@ public class EnemyLifeComponentDron : MonoBehaviour
     {
         //si tiene vida se le quita 1 vida
         //Debug.Log("Has infligido daño al dron");
+        //sonido de daño metalico ya asignado
+        this.GetComponent<AudioSource>().Play(0);
         //le quitamos 1 vida
         _currentLife -= _hitDamage;
         //actualizamos barra de vida
