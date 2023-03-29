@@ -46,9 +46,13 @@ public class EnemyAttackController : MonoBehaviour
 
     [SerializeField]
     public Rigidbody bala;
+
+    //aqui pones el sonido de disparo de la bala dron
+    [SerializeField]
+    private protected AudioClip disparoBala;
     #endregion
     #region properties
-   
+
     #endregion
     #region methods
     /// <summary>
@@ -111,6 +115,7 @@ public class EnemyAttackController : MonoBehaviour
 
     public void Shoot()
     {
+        
         //queremos crear mas de una bala, en el momento en que se instancia 1 bala se hace su movimiento automatico
         //se empieza corrutina de disparo
         StartCoroutine("Disparos");
@@ -136,6 +141,9 @@ public class EnemyAttackController : MonoBehaviour
             Rigidbody balaInstancia = Instantiate(bala, apuntador.position, Quaternion.identity);
             //le añadimos una fuerza a la bala instanciada en una direccion
             balaInstancia.AddForce(apuntador.forward * _velocidadDisparo, ForceMode.Impulse);
+            //hacemos sonido disparo Dron
+            this.GetComponent<AudioSource>().clip = disparoBala;
+            this.GetComponent<AudioSource>().PlayOneShot(disparoBala, 0.5f);
 
             //aumento
             i++;

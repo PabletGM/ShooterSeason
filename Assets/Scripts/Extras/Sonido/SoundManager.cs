@@ -31,6 +31,11 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    static public SoundManager GetInstance()
+    {
+        return _instanceSoundManager;
+    }
+
     public void SeleccionAudio(int indice , float volumen)
     {
         //pone un audioClip con volumen determinado
