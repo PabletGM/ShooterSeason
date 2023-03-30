@@ -11,6 +11,8 @@ public class DialogueScriptNPC : MonoBehaviour
     [SerializeField]
     private protected TextMeshProUGUI dialogueText;
 
+    [SerializeField] private protected AudioClip[] audiosRobot;
+
     #endregion
 
     #region parameters
@@ -45,6 +47,8 @@ public class DialogueScriptNPC : MonoBehaviour
             {
                 //avisamos a GameManager que esta modo dialogo
                 GameManager.GetInstance().SetModoDialogos(true);
+                //hacemos sonidito robot
+                SonidoRobotDialogoAleatorio();
                 NextLine();
             }
             //o se termina texto 
@@ -123,5 +127,10 @@ public class DialogueScriptNPC : MonoBehaviour
             //desactivamos panel de texto
             //gameObject.SetActive(false);
         }
+    }
+
+    public void SonidoRobotDialogoAleatorio()
+    {
+        this.GetComponent<AudioSource>().PlayOneShot(audiosRobot[0],1f);
     }
 }
