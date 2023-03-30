@@ -131,6 +131,9 @@ public class DialogueScriptNPC : MonoBehaviour
 
     public void SonidoRobotDialogoAleatorio()
     {
-        this.GetComponent<AudioSource>().PlayOneShot(audiosRobot[0],1f);
+        //hacemos que este audioSource del componente de este script se le asocie un audio random
+        this.GetComponent<AudioSource>().clip = audiosRobot[Random.Range(0, audiosRobot.Length)];
+        //lo ponemos
+        this.GetComponent<AudioSource>().Play();
     }
 }
