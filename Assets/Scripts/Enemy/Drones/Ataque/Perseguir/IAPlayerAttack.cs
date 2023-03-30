@@ -37,7 +37,7 @@ public class IAPlayerAttack : MonoBehaviour
             //si la distancia entre la ametralladora y el enemigo es < x
             if (Vector3.Distance(transform.position, goalDestination.transform.position) < _myMinimumDistance)
             {
-                Debug.Log("localizado");
+                //Debug.Log("localizado");
                 //se pone el transform del enemigo como posicion del FPSPlayer 
                 navMeshAgent.destination = FPSPlayer.transform.position;
             }
