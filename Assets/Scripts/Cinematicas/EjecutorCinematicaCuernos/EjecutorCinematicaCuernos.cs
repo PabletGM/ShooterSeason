@@ -22,6 +22,9 @@ public class EjecutorCinematicaCuernos : MonoBehaviour
             zonaPuebloHieloDesbloqueada.GetComponent<BoxCollider>().enabled = true;
             //si se choca el player invocamos evento
             evento.Invoke();
+
+            //ACTIVAMOS sonido cinematica 1 vez
+            this.GetComponent<AudioSource>().Play(0);
         }
     }
 
