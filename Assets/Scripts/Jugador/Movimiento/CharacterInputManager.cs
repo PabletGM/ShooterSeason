@@ -122,7 +122,12 @@ public class CharacterInputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _myCharacterAttackController.Shoot(GetWorldPoint(Input.mousePosition, 100f));
-            soundManager.SeleccionAudio(1, 1f);
+            //sino está puesto modo dialogos, si devuelve false, suena disparos
+            if(GameManager.GetInstance().GetModoDialogos() == false)
+            {
+                soundManager.SeleccionAudio(1, 1f);
+            }
+           
         }
 
 

@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     //por defecto a true porque en menus  iniciales debe estar puesto
     [HideInInspector]
      public bool _myCursor = true;
+    //si es true el sonido de disparar al darle click no debe sonar
+    private bool modoDialogos = false;
     #endregion
     #region references
     /// <summary>
@@ -98,6 +100,18 @@ public class GameManager : MonoBehaviour
         _listOfEnemies = new List<EnemyController>();
         //_listOfEnemies2 = new List<EnemyController2>();
 
+    }
+
+    //determina si estamos en un dialogo para que suene el disparo del click derecho o no
+    public void SetModoDialogos(bool set)
+    {
+        modoDialogos = set;
+    }
+
+    //determina si estamos en un dialogo para que suene el disparo del click derecho o no
+    public bool GetModoDialogos()
+    {
+        return modoDialogos;
     }
 
     public void SetTipsButtonGM(bool enabled)

@@ -43,6 +43,8 @@ public class DialogueScriptNPC : MonoBehaviour
             //o siguiente linea
             if (dialogueText.text == lines[index])
             {
+                //avisamos a GameManager que esta modo dialogo
+                GameManager.GetInstance().SetModoDialogos(true);
                 NextLine();
             }
             //o se termina texto 
@@ -58,6 +60,8 @@ public class DialogueScriptNPC : MonoBehaviour
     {
         //comenzar desde linea 0
         index = 0;
+        //avisamos a GameManager que esta modo dialogo
+        GameManager.GetInstance().SetModoDialogos(true);
         //llamamos a corrutina que escriba las cosas
         StartCoroutine(WriteLine());
 
@@ -94,11 +98,15 @@ public class DialogueScriptNPC : MonoBehaviour
             if(this.gameObject.name == "PanelDialogue")
             {
                 GameManager.GetInstance().QuitarDialogosNPCFueraTemplo(false);
+                //se quita modo dialogo y ya suenan disparos al click derecho
+                GameManager.GetInstance().SetModoDialogos(false);
             }
             //NPC Pradera
             else if(this.gameObject.name == "PanelDialogue2")
             {
                 GameManager.GetInstance().QuitarDialogosNPCPradera(false);
+                //se quita modo dialogo y ya suenan disparos al click derecho
+                GameManager.GetInstance().SetModoDialogos(false);
                 LogicaObjetivosTemplo.GetInstance().SetNewMission("Avanza hasta Pueblo Helado");
             }
 
@@ -106,6 +114,8 @@ public class DialogueScriptNPC : MonoBehaviour
             else if (this.gameObject.name == "PanelDialogue3")
             {
                 GameManager.GetInstance().QuitarDialogosNPCIsla(false);
+                //se quita modo dialogo y ya suenan disparos al click derecho
+                GameManager.GetInstance().SetModoDialogos(false);
                 LogicaObjetivosTemplo.GetInstance().SetNewMission("Sube la montaña");
             }
 
